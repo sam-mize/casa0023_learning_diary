@@ -1,5 +1,5 @@
 ---
-title: "January 13, 2026"
+title: "January 20th, 2026"
 ---
 
 # Summary
@@ -21,8 +21,6 @@ In the lecture, it was recommended to use multiple tiles from time-adjacent pass
 @perssonTreeSpeciesClassification2018 trained a random forest model to predict specific tree species using various sets of frequency bands available from Sentinel-2 to narrow down which specific bands are most important for that task in the context of central Sweden. They found that the set of 13 spectral bands provided reasonably good accuracy, but stressed the importance of using imagery from the seasons at which the foliage is most distinguishable, in the early spring, late spring, and fall. Just as mentioned in the intro lecture, the researchers derived spectral signatures characteristic of each species of interest. The results here are interesting and maybe useful in Sweden or other places where large areas of forests are mostly the same species. North America, especially east of the Rocky Mountains has very mixed forests which would likely not be distinguishable without better spatial resolution. 
 
 \[This\]([https://www.github.com/sentinel-hub/natural-color)\[https://www.github.com/sentinel-hub/natural-color](https://www.github.com/sentinel-hub/natural-color)[https://www.github.com/sentinel-hub/natural-color)) contains some examples and scripts developed to transform Sentinel color channels into more natural (to human perception) sRGB channels. This could be useful for presentations, because I’ve noticed the odd coloration makes the satellite images feel a bit detached from reality to me, like an over-saturated game or something. I imagine presentations featuring what a person feels like they would perceive if they were personally flying high overhead are more psychologically affecting, whether strictly scientifically relevant or not.
-
-\
 
 # Reflection
 
