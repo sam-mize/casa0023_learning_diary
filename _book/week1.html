@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction – CASA0023: Learning Diary</title>
+<title>1&nbsp; Week 1 – CASA0023: Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,42 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -65,7 +50,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week1.html" rel="next">
+<link href="./references.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -118,7 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -153,14 +138,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 1</span></span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -174,15 +153,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">1.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></h1>
 </div>
 
 
@@ -199,16 +186,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">(<a href="references.html#ref-knuth84" role="doc-biblioref"><strong>knuth84?</strong></a>)</span> for additional discussion of literate programming.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<section id="summary" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
+<p>Remote Sensing (since we’re mostly remotely sensing Earth, used interchangeably with “Earth Observation”) is acquisition of information from a distance using sensors. Typically, we’ll be working with data from satellites, although planes, drones, and anything else with any kind of sensor could potentially be used. Lidar data is point clouds, but we’ll typically be working with raster data. Even if we do use Lidar, it can usually be converted to a raster heightmap. A variety of observation satellites provide raster data with varying resolutions analogous to more typical video data:</p>
+<ol type="1">
+<li>Spatial Resolution (10~60m depending on source and spectral band) ≈ video resolution</li>
+<li>Spectral Resolution (visible plus longer and sometimes shorter bands) ≈ color channels</li>
+<li>Temporal Resolution (1~16 days for satellite) ≈ frame rate</li>
+<li>Radiometric Resolution (4~12 bits maybe) ≈ bit depth</li>
+</ol>
+<p>Earth’s atmosphere interferes differently with transmission of different wavelengths of light. Typically, we’ll be working with data which has been processed to control for those effects and “reflect” the surface of Earth as if the atmosphere was perfectly transparent to all wavelengths. Sometimes things that appear similar to our eyes affect light outside the visible spectrum very differently, allowing them to be easily distinguished by a specific spectral band. In other cases more subtle differences in a variety of frequency bands (a “spectral signature”), analogous to a frequency-response in acoustics, circuit analysis, vibration analysis, or controls engineering, might distinguish them. A trivial example presented in the introductory lecture and practical is that foliage appears very bright in the near infrared (NIR) band, but dark in blue and green.</p>
+<p><br>
+In the lecture, it was recommended to use multiple tiles from time-adjacent passes and take the median value for each pixel. Why? If you’re working with 4-bit radiometric resolution and you have [B1111, B1111, B1111, B1111, B1001, B1000, B1000], you don’t want B1111 = 15 unless you’re studying clouds, and why use B1000 = 8 when you can use 8.33? Presumably everything is getting converted to floating point arrays anyway for analysis?</p>
+</section>
+<section id="applications" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
+<p><span class="citation" data-cites="perssonTreeSpeciesClassification2018">Persson, Lindberg, and Reese (<a href="references.html#ref-perssonTreeSpeciesClassification2018" role="doc-biblioref">2018</a>)</span> trained a random forest model to predict specific tree species using various sets of frequency bands available from Sentinel-2 to narrow down which specific bands are most important for that task in the context of central Sweden. They found that the set of 13 spectral bands provided reasonably good accuracy, but stressed the importance of using imagery from the seasons at which the foliage is most distinguishable, in the early spring, late spring, and fall. Just as mentioned in the intro lecture, the researchers derived spectral signatures characteristic of each species of interest. The results here are interesting and maybe useful in Sweden or other places where large areas of forests are mostly the same species. North America, especially east of the Rocky Mountains has very mixed forests which would likely not be distinguishable without better spatial resolution.&nbsp;</p>
+<p>[This](<a href="https://www.github.com/sentinel-hub/natural-color">https://www.github.com/sentinel-hub/natural-color)[https://www.github.com/sentinel-hub/natural-color</a>[https://www.github.com/sentinel-hub/natural-color)) contains some examples and scripts developed to transform Sentinel color channels into more natural (to human perception) sRGB channels. This could be useful for presentations, because I’ve noticed the odd coloration makes the satellite images feel a bit detached from reality to me, like an over-saturated game or something. I imagine presentations featuring what a person feels like they would perceive if they were personally flying high overhead are more psychologically affecting, whether strictly scientifically relevant or not.</p>
+<p><br>
+</p>
+</section>
+<section id="reflection" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
+<p>My brother is a forester, responsible for evaluating forest tracts for specific purposes: timber value, suitable habitat for specific wildlife, and most recently for forestry-based carbon credits. I think his industry could use more and better EO than what they currently do. For now, remote sensing is not directly applied to the tracts for which carbon credits are issued. Instead foresters directly measure every tree within randomly selected plots of the tracts. Because that’s expensive, it’s only done once every 5 years. The owners of the land are supposed to be paid for their carbon sequestration every year, so the administrators of the credits rely on predicted growth rates for the in-between years. Accumulated error in the prediction has to be made-up when the 5-year cycle ends. Maybe using EO data and a prediction model that would update every time the satellite passed by (or at least more frequently than every 5 years) could reduce the error and enable more consistent and reliable payments.&nbsp;</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-perssonTreeSpeciesClassification2018" class="csl-entry" role="listitem">
+Persson, Magnus, Eva Lindberg, and Heather Reese. 2018. <span>“Tree <span>Species Classification</span> with <span>Multi-Temporal Sentinel-2 Data</span>.”</span> <em>Remote Sensing</em> 10 (11): 1794. <a href="https://doi.org/10.3390/rs10111794">https://doi.org/10.3390/rs10111794</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -618,8 +626,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week1.html" class="pagination-link" aria-label="Week 1">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 1</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
