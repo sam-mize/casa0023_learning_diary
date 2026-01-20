@@ -2,13 +2,13 @@ project:
   type: book
 
 book:
-  title: "learning_diary"
-  author: "Norah Jones"
+  title: "CASA0023: Learning Diary"
+  author: "Sam Mize"
   date: "1/20/2026"
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
+    - week1.qmd
     - references.qmd
 
 bibliography: references.bib

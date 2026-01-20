@@ -1,9 +1,9 @@
-# Preface {.unnumbered}
+# Introduction {.unnumbered}
 
-This is a Quarto book.
+## CASA0023: Remotely Sensing Cities and Environments
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+It's module number 0023 in CASA, and its subject is remotely sensing cities and environments.
 
-```{r}
-1 + 1
-```
+## Sam Mize
+
+I'm a student learning about remotely sensing cities and environments in CASA0023.

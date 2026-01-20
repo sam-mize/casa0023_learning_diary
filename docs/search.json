@@ -2,11 +2,11 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "learning_diary",
+    "title": "CASA0023: Learning Diary",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "Introduction",
     "crumbs": [
-      "Preface"
+      "Introduction"
     ]
   },
   {
@@ -14,7 +14,7 @@
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "This is a book created from markdown and executable code.\nSee (knuth84?) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -37,6 +37,36 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "index.html#casa0023-remote-sensing-cities-and-environments",
+    "href": "index.html#casa0023-remote-sensing-cities-and-environments",
+    "title": "CASA0023: Learning Diary",
+    "section": "CASA0023: Remote Sensing Cities and Environments",
+    "text": "CASA0023: Remote Sensing Cities and Environments\nIt’s module number 23 in CASA, and it’s subject is remote sensing cities and environments.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#sam-mize",
+    "href": "index.html#sam-mize",
+    "title": "CASA0023: Learning Diary",
+    "section": "Sam Mize",
+    "text": "Sam Mize\nI’m a student learning about remotely sensing cities and environments in CASA0023.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#casa0023-remotely-sensing-cities-and-environments",
+    "href": "index.html#casa0023-remotely-sensing-cities-and-environments",
+    "title": "CASA0023: Learning Diary",
+    "section": "CASA0023: Remotely Sensing Cities and Environments",
+    "text": "CASA0023: Remotely Sensing Cities and Environments\nIt’s module number 0023 in CASA, and its subject is remotely sensing cities and environments.",
+    "crumbs": [
+      "Introduction"
     ]
   }
 ]
