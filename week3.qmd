@@ -1,0 +1,15 @@
+---
+title: "January 27th, 2026"
+---
+
+# Summary
+
+Many corrections are performed on the raw satellite imagery to produce the ground-level reflectance values we're typically interested in. Generally speaking, it's best to get "analysis-ready" imagery which already has these corrections performed. Despite all the corrections applied, the data will not perfectly match up from one tile to the next or from one pass to the next. For merging multiple tiles together, many different methods could be used, but mean and median are typical. Once the channels/bands of the image are assembled, more can easily be created by mathematicall combining the existing ones. Also, convolutions with various kernels can reveal underlying features of the imagery.
+
+#  Applications
+
+
+
+# Reflection
+
+I have a fair bit of experience with programmatic image processing.
