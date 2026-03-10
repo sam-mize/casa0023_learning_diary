@@ -138,5 +138,25 @@
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>February 10th, 2026</span>"
     ]
+  },
+  {
+    "objectID": "week5.html",
+    "href": "week5.html",
+    "title": "5  February 24th, 2026",
+    "section": "",
+    "text": "6 Summary\nMy hometown of Burlington, North Carolina, USA has a Comprehensive Plan which includes a set of roadway corridors which are aesthetically in need of redevelopment, as well as a goal of improving the urban environment and reducing the UHI effect by planting public street trees and encouraging (or requiring) property developers to include trees. They say that future growth should occur within the boundaries of the city for the foreseeable future to avoid developing any more of the peripheral agricultural land. They’ve had this plan in its current iteration for over a decade, and you would never know from seeing the town. Greenfield developments on the edge of town have carried on. I think they have made some slight progress on the tree planting, and maybe a very small amount of progress on the redevelopment along the target corridors, but it’s still really bad. I think the city council has mostly good ideas in their Comprehensive Plan, but the implementation seems hopelessly slow. Maybe incorporating EO data could help to better target efforts. Or maybe it could provide better evidence of whatever progress has been made to keep people like me from giving up on it and moving away.\n\n\n7 Applications\nNo remote sensing data can “solve” a policy challenge on its own, and my view is that it’s generally unlikely to be helpful to analyze each individual city exhaustively when there are well known and frankly obvious ways to improve local conditions generally. There’s so much low-hanging fruit which has been totally neglected for decades. That said, Landsat temperature band data could be incorporated into these redevelopment projects, as a way of identifying the highest priority areas for redevelopment based on their contributions to the UHI effect based on the surface temperature. NIR data could assist in identifying areas most in need of vegetation. I really don’t think the remote sensing is necessary for policymakers, but it might help to provide evidence to doubtful constituents so they’ll allow a bit more progress for a bit more time than they otherwise might.\n\n\n8 Reflection\nI was very surprised to see that the Burlington City Council officially has a plan that generally seems intelligent and informed, comporting with the UN new urban agenda and, in direction if not in magnitude, with my preferences. The actual condition of the city is the opposite of all that, and the trend has been toward sprawl and auto-centrality since about 1920. I was even more surprised to see that the public was generally supportive, according to polling the Council reported that they had done on general new urbanism topics. My impression of the public is not generally positive, especially in the US, and more especially in Burlington, because what I see more of is people using any means available to them to aggressively oppose even the faintest, most watered-down and incrementalist bit of progress at every turn. Maybe my impression of the general public attitude is part of a situation of pluralistic ignorance, and more community building within the citizenry could dispell that. Assuming the Councilors meant what they wrote in their policy at all, whatever tools can help them achieve their goals faster will be a huge help to the city.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>February 24th, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html",
+    "href": "week6.html",
+    "title": "6  March 2, 2026",
+    "section": "",
+    "text": "7 Summary\nRandom Classic image segmentation techniques (CART, Random Forest, NaiveBayes and SVM) are available for use in Google Earth Engine, on up to 1,000,000 points at a time. 1,000,000 is really not many. That’s a 1MP photo, like a 20-year-old phone camera. I used to work with at least 5MP industrial machine vision cameras, and sometimes trained models for those images on a laptop. It seems Google is not being particularly generous with the cloud computing resources, but it should at least be fast to train.\n\n\n8 Applications\n@choudhary_random_2022 trained a Random Forest model on Sentinel-2 data from GEE to predict rice yield from small farms in Guangdong Province, China. Lots of field work was involved in collecting the actual status of the rice fields, which was supported by the Guangdong Department of Agriculture. They used much more than 1000000 points and had to train the model outside of GEE, but achieved much more accurate results on test data than linear or single decision tree models.\n\n\n9 Reflection\nThis sort of approach seems pretty straightforward and foolproof.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>March 2, 2026</span>"
+    ]
   }
 ]
