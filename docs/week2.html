@@ -89,6 +89,7 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/fitvids-2.1.1/fitvids.min.js"></script>
 
 
 </head>
@@ -159,6 +160,36 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">February 24th, 2026</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">March 2, 2026</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">March 9, 2026</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">March 16, 2026</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">March 23, 2026</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -173,9 +204,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">4</span> Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">2.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">2.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -201,22 +232,31 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Summary</h1>
+<section id="summary" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.1</span> Summary</h2>
 <p>NASA’s Ice, Cloud, and Land Elevation Satellite (ICESat) launched in 2002 and collected data using its Geoscience Laser Altimeter System (GLAS) instrumentation between 2003 and 2010, when it ceased functioning. Its successor, ICESat-2, has replaced it since 2018. Fundamentally, both measure the distance from the satellite instrumentation to the Earth’s surface by shooting pulses of laser light at the Earth and recording the time required for the reflection of the laser to reach a telescope mounted parallel to the laser. On-board processing is used to detect the pulses approximately and select the regions of data to transmit to the ground for more refined processing. ICESat could only handle 40 pulses per second, but ICESat-2 can do 10000. Consequently, ICESat-2 collects 250 times more points along the same path length. The original could measure with about 10 cm resolution, and the current resolution is about 5 mm.</p>
-<pre><code>xaringanExtra::embed_xaringan(url = "https://sam-mize.github.io/casa0023/slideshow.html#1",
-                              ratio = "16:9")</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
+<iframe src="https://sam-mize.github.io/casa0023/slideshow.html#1" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+</div>
+</div>
 </section>
-<section id="applications" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Applications</h1>
-<p><span class="citation" data-cites="sunDiscoveringForestHeight2020">Sun, Qi, and Huang (<a href="references.html#ref-sunDiscoveringForestHeight2020" role="doc-biblioref">2020</a>)</span> found that combining data across both ICESat missions enabled them to estimate reforestation in remote area of China, which is important knowledge for carbon balance and general environmental science.</p>
+<section id="applications" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">2.2</span> Applications</h2>
+<p>Although ICESat and ICESat-2 were primarily intended to monitor ice in polar regions, many other uses have been found for the measurements they collected. Accuracy is typically much lower for snow depth measurements in mountainous areas further from the poles, because the passes are further apart and because the steepness of the terrain and presence of vegetation interferes with the reflection of light from the surface, but specialized filtering and aggregation methods applied to ICESat-2 data have improved accuracy in Western US states <span class="citation" data-cites="noauthor_mountain_2024">(<a href="references.html#ref-noauthor_mountain_2024" role="doc-biblioref"><span>“Mountain Snow Depth Retrievals from Customized Processing of <span>ICESat</span>-2 Satellite Laser Altimetry”</span> 2024</a>)</span>. Accuracy relative to <em>in situ</em> measurement is still limited by the accuracy of the model of the underlying terrain, which is still somewhat affected by those same issues of steepness and vegetation even when it’s measured by aerial LiDAR. <span class="citation" data-cites="sunDiscoveringForestHeight2020">Sun, Qi, and Huang (<a href="references.html#ref-sunDiscoveringForestHeight2020" role="doc-biblioref">2020</a>)</span> found that combining data across both ICESat missions enabled them to estimate reforestation at low (1km) resolution in remote area of China, which is useful for carbon balance estimations and general environmental monitoring, but again required specialized data processing and aggregation to overcome limitations (especially those of the original ICESat) and <em>in situ</em> measurements to compare against.</p>
 </section>
-<section id="reflection" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Reflection</h1>
-<p>I have use similar devices (in priciple, not precision or expense) and can easily see how having one in space would be useful. The higher precision and resolution of ICESat-2 has enabled more use in forestry on shorter timescales in addition to the primary ice-tracking goal of the mission. Maybe another 250-fold increase in resolution is right around the corner.</p>
+<section id="reflection" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">2.3</span> Reflection</h2>
+<p>I have used similar devices (in principle, not precision or expense) to measure distances in my house for hanging wall art and various renovation projects, and have directly experienced the difficulty of achieving an accurate measurement on a sloped surface. Especially when you’re measuring a concave corner and the paint is glossy enough, you sometimes get a bit of a double-bounce. I can easily see how having one in space would be useful but tricky to employ. Snow is extremely important to the Western US, since water is often otherwise scarce there. And, for some reason, they don’t always get as much snow as they used to. Accurate monitoring should help those States better ration the use of their limited resource. The higher precision and resolution of ICESat-2 has enabled more use outside the primary ice-tracking goal of the mission. Maybe ICESat-3 with bring another 250-fold increase in resolution soon.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-noauthor_mountain_2024" class="csl-entry" role="listitem">
+<span>“Mountain Snow Depth Retrievals from Customized Processing of <span>ICESat</span>-2 Satellite Laser Altimetry.”</span> 2024. <em>Remote Sensing of Environment</em> 300 (January): 113843. <a href="https://doi.org/10.1016/j.rse.2023.113843">https://doi.org/10.1016/j.rse.2023.113843</a>.
+</div>
 <div id="ref-sunDiscoveringForestHeight2020" class="csl-entry" role="listitem">
 Sun, Tong, Jianbo Qi, and Huaguo Huang. 2020. <span>“Discovering Forest Height Changes Based on Spaceborne Lidar Data of <span>ICESat-1</span> in 2005 and <span>ICESat-2</span> in 2019: A Case Study in the <span>Beijing-Tianjin-Hebei</span> Region of <span>China</span>.”</span> <em>Forest Ecosystems</em> 7 (1): 53. <a href="https://doi.org/10.1186/s40663-020-00265-w">https://doi.org/10.1186/s40663-020-00265-w</a>.
 </div>

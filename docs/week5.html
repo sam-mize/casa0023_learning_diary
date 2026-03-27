@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; January 27th, 2026 – CASA0023: Learning Diary</title>
+<title>5&nbsp; February 24th, 2026 – CASA0023: Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week4.html" rel="next">
-<link href="./week2.html" rel="prev">
+<link href="./week6.html" rel="next">
+<link href="./week4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -102,7 +102,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">January 27th, 2026</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">February 24th, 2026</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -147,7 +147,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">January 27th, 2026</span></span></a>
   </div>
 </li>
@@ -159,7 +159,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link">
+  <a href="./week5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">February 24th, 2026</span></span></a>
   </div>
 </li>
@@ -203,9 +203,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">3.2</span> Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">5.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -214,7 +214,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">January 27th, 2026</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">February 24th, 2026</span></h1>
 </div>
 
 
@@ -231,27 +231,28 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
-<p>Many corrections are performed on the raw satellite imagery to produce the ground-level reflectance values we’re typically interested in. Generally speaking, it’s best to get “analysis-ready” imagery which already has these corrections performed. The Dark Object Subtraction (DOS) method presented in the week’s practical seems pretty obviously flawed; how can we be sure that each image contains some of what should be considered the least reflective surface? Despite all the corrections applied, the data will not perfectly match up from one tile to the next or from one pass to the next. This is because we generally do not have sufficient data on the state of the atmosphere in every particular time and place to perfectly calculate and remove all its effects and must rely on relative corrections. Better, more absolute, calibration is possible if targets of known reflectivity are positioned in view of an EO instrument passing overhead.</p>
-<p>For merging multiple overlapping EO image tiles together, many different methods could be used, but mean and median are typical options. I wonder if something like a harmonic mean might work better than either median or arithmetic mean? Once the channels/bands of the image are assembled, more can easily be created by mathematically combining the existing ones pixel-wise. Also, convolutions across multiple pixels with various kernels can reveal underlying features of the imagery, such as high-pass, low-pass, or specific textures.</p>
+<section id="summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
+<p>Google Earth Engine (GEE) is a free (for now and for certain limited purposes) platform that serves and displays data from EO instruments programmatically, as well as providing some cloud-computing resources and built-in functions for common operations which are optimized to take advantage of running on Google’s servers. Scripting in GEE requires Javascript, which is less familiar to me than Python, but also less annoying to me than R. I’ll take it. According to today’s lecture, LLMs are not very familiar with GEE code, since there is so much more vanilla Javascript for them to have trained on than GEE-specific code.</p>
+<p>Interestingly, there is some interplay between the GUI and the scripting, allowing a user to draw in polygons and select points using the mouse.</p>
+<p>The main task of the practical was combining multiple tiles into a mosaiced image using the median to combine multiple passes of the same tile, and the mean to combine the overlapping portions of images. Why not use something spatial to combine them, like at least an interpolation between tiles through the overlapping portion? We also reviewed band math, texture measures, and PCA using GEE. PCA in particular was much more involved than in R or Python, but not insurmountable to understand with some careful reading.</p>
 </section>
-<section id="applications" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
-<p>Sensor Invariant Atmospheric Correction SIAC is a way to better estimate the state of the atmosphere from EO images using Bayesian statistics and applying certain constraining assumptions to the estimates of aerosol optical thickness (AOT) and total column water vapour (TCWV), the most important atmospheric conditions which impact the relationship between Top of Atmosphere (TOA) and Bottom of Atmosphere (BOA) reflectance. This allows higher consistency across different EO missions’ imagery, especially Landsat and Sentinel-2, and through time and space, compared with more basic and commonly employed heuristic techniques <span class="citation" data-cites="yin_bayesian_2022">(<a href="references.html#ref-yin_bayesian_2022" role="doc-biblioref">Yin, Lewis, and Gómez-Dans 2022</a>)</span>. This paper is long and dense, and I plan to dig into it more later, but it’s very interesting to see something like this employed. I’m a fan of Bayesian methods generally.</p>
-<p>On the contrary, some analyses are interested in a very similar process of distinguishing the atmospheric effects from the surface reflectance for the opposite reason. To study the amount of aerosol pollution due to wildfires, <span class="citation" data-cites="lolli_characterizing_2024">Lolli et al. (<a href="references.html#ref-lolli_characterizing_2024" role="doc-biblioref">2024</a>)</span> constructed an index of sums of differences between clear and polluted days across certain bands which are known to be affected by wildfire smoke particulates. Interestingly, both groups of researchers employed AERONET stations (ground-based sensors that detect intensity of light incoming from the sun at a range of frequencies) to validate their results, whether they were attempting to remove the effects of the atmosphere or to isolate them.</p>
+<section id="applications" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> Applications</h2>
+<p>As a demonstration of the power and potential of GEE (at the time, recently released), <span class="citation" data-cites="noauthor_land_nodate"><span>“Land Surface Evapotranspiration Estimation Combining Soil Texture Information and Global Reanalysis Datasets in <span>Google</span> <span>Earth</span> <span>Engine</span>”</span> (<a href="references.html#ref-noauthor_land_nodate" role="doc-biblioref">n.d.</a>)</span> employed it to apply an evapotranspiration method devised and tested on certain regions in the United States to the entire globe rapidly and easily. Working with derived datasets served by GEE, they could simply apply the published formula at the available resolution and compare results with <em>in situ</em> measurements collected at certain points around the world.</p>
+<p>Around the same time, <span class="citation" data-cites="yancho_google_2020">Yancho et al. (<a href="references.html#ref-yancho_google_2020" role="doc-biblioref">2020</a>)</span> developed a much more involved tool in GEE: Google Earth Engine Mangrove Mapping Methodology (GEEMMM). The development of this tool involved producing generalized code to filter to areas of interest, further filter by elevation and slope, remove clouds and water, and train a random forest model to classify the landcover type with a focus on distinguishing mangrove forests from everything else. This wide variety of complexity from early on in GEE’s history demonstrates it’s wide appeal and versatility.</p>
 </section>
-<section id="reflection" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
-<p>I have a fair bit of experience with programmatic image processing, so none of this was new to me apart from the atmospheric correction. In the machine vision applications I have worked with before, there were always very consistently controlled and calibrated lighting conditions and calibration was only required annually or so as the LEDs slowly and evenly dimmed. The EO situation is obviously very different from that, but the idea of Multiple-Date Image Normalization appeals to me as a way to get a bit more consistent results, and I speculate that there should be a way to use a lot more of the image instead of just a few hand selected pseudo-invariant features. Some machine learning, or quantile regression across all the pixels maybe?</p>
+<section id="reflection" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
+<p>I’m generally excited about working with GEE. Although I’m arriving a bit later on the scene this time, it reminds me of when I first installed Google Earth on my family PC in 2005. With the massive proliferation and decentralization of EO data and analysis through GEE, it seems difficult to avoid significant duplication of effort. It may also be more difficult to verify the reliability of various analyses presented, since it’s so easy for anyone to carry out.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-lolli_characterizing_2024" class="csl-entry" role="listitem">
-Lolli, Simone, Luciano Alparone, Alberto Arienzo, and Andrea Garzelli. 2024. <span>“Characterizing <span>Dust</span> and <span>Biomass</span> <span>Burning</span> <span>Events</span> from <span>Sentinel</span>-2 <span>Imagery</span>.”</span> <em>Atmosphere</em> 15 (6): 672. <a href="https://doi.org/10.3390/atmos15060672">https://doi.org/10.3390/atmos15060672</a>.
+<div id="ref-noauthor_land_nodate" class="csl-entry" role="listitem">
+<span>“Land Surface Evapotranspiration Estimation Combining Soil Texture Information and Global Reanalysis Datasets in <span>Google</span> <span>Earth</span> <span>Engine</span>.”</span> n.d. <em>Remote Sensing Letters</em>. Accessed March 27, 2026. <a href="https://www.tandfonline.com/doi/abs/10.1080/2150704X.2019.1633487">https://www.tandfonline.com/doi/abs/10.1080/2150704X.2019.1633487</a>.
 </div>
-<div id="ref-yin_bayesian_2022" class="csl-entry" role="listitem">
-Yin, Feng, Philip E. Lewis, and Jose L. Gómez-Dans. 2022. <span>“Bayesian Atmospheric Correction over Land: <span>Sentinel</span>-2/<span>MSI</span> and <span>Landsat</span> 8/<span>OLI</span>.”</span> <em>Geoscientific Model Development</em> 15 (21): 7933–76. <a href="https://doi.org/10.5194/gmd-15-7933-2022">https://doi.org/10.5194/gmd-15-7933-2022</a>.
+<div id="ref-yancho_google_2020" class="csl-entry" role="listitem">
+Yancho, J. Maxwell M., Trevor Gareth Jones, Samir R. Gandhi, Colin Ferster, Alice Lin, and Leah Glass. 2020. <span>“The <span>Google</span> <span>Earth</span> <span>Engine</span> <span>Mangrove</span> <span>Mapping</span> <span>Methodology</span> (<span>GEEMMM</span>).”</span> <em>Remote Sensing</em> 12 (22): 3758. <a href="https://doi.org/10.3390/rs12223758">https://doi.org/10.3390/rs12223758</a>.
 </div>
 </div>
 </section>
@@ -658,13 +659,13 @@ Yin, Feng, Philip E. Lewis, and Jose L. Gómez-Dans. 2022. <span>“Bayesian Atm
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week2.html" class="pagination-link" aria-label="January 20th, 2026">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">January 20th, 2026</span></span>
+      <a href="./week4.html" class="pagination-link" aria-label="February 10th, 2026">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">February 10th, 2026</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week4.html" class="pagination-link" aria-label="February 10th, 2026">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">February 10th, 2026</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week6.html" class="pagination-link" aria-label="March 2, 2026">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">March 2, 2026</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

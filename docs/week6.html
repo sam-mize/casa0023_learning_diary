@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; January 27th, 2026 – CASA0023: Learning Diary</title>
+<title>6&nbsp; March 2, 2026 – CASA0023: Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week4.html" rel="next">
-<link href="./week2.html" rel="prev">
+<link href="./week7.html" rel="next">
+<link href="./week5.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -102,7 +102,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">January 27th, 2026</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">March 2, 2026</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -147,7 +147,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">January 27th, 2026</span></span></a>
   </div>
 </li>
@@ -165,7 +165,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link">
+  <a href="./week6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">March 2, 2026</span></span></a>
   </div>
 </li>
@@ -203,9 +203,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">3.2</span> Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -214,7 +214,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">January 27th, 2026</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">March 2, 2026</span></h1>
 </div>
 
 
@@ -231,27 +231,37 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
-<p>Many corrections are performed on the raw satellite imagery to produce the ground-level reflectance values we’re typically interested in. Generally speaking, it’s best to get “analysis-ready” imagery which already has these corrections performed. The Dark Object Subtraction (DOS) method presented in the week’s practical seems pretty obviously flawed; how can we be sure that each image contains some of what should be considered the least reflective surface? Despite all the corrections applied, the data will not perfectly match up from one tile to the next or from one pass to the next. This is because we generally do not have sufficient data on the state of the atmosphere in every particular time and place to perfectly calculate and remove all its effects and must rely on relative corrections. Better, more absolute, calibration is possible if targets of known reflectivity are positioned in view of an EO instrument passing overhead.</p>
-<p>For merging multiple overlapping EO image tiles together, many different methods could be used, but mean and median are typical options. I wonder if something like a harmonic mean might work better than either median or arithmetic mean? Once the channels/bands of the image are assembled, more can easily be created by mathematically combining the existing ones pixel-wise. Also, convolutions across multiple pixels with various kernels can reveal underlying features of the imagery, such as high-pass, low-pass, or specific textures.</p>
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<p>Classic image segmentation techniques (Classification and Regression Tree, Random Forest, Naive Bayes and Support Vector Machines) are available for use in Google Earth Engine, on up to 1,000,000 points at a time. 1,000,000 is really not many. That’s a 1MP photo, like a mobile phone camera as old as some of the students in the program. I used to work with at least 5MP industrial machine vision cameras, and sometimes trained models for those images on a laptop. It seems Google is not being particularly generous with the cloud computing resources, but it should at least be fast to train.</p>
+<p>Training machine learning models in general required reserving some (here 30%, but I’ve seen less than that in other contexts) of the data as a test set (and sometimes further reserving more data as a validation set, although we didn’t explicitly do this in the practical). A major difference could be observed in performance when the test-train split was done on the polygon level or on the individual pixel level. I expected pixel-wise to be better, but I did not expect such a stark difference. I noticed that there’s a totally obvious error in the code for the polygon-wise split too, which might be part of the issue. The split is actually 50/50 rather than 70/30, so the model is only getting to see half of the data.</p>
+<pre><code>// // --------------------- train, test split --------------------------------
+
+// We want to reserve some of the data for testing, to avoid overfitting the model.
+var split = 0.5;  // Roughly 70% training, 30% testing.
+//           ↑
+//     THIS HERE IS WRONG
+
+
+var trainingPartition = withRandom.filter(ee.Filter.lt('random', split));
+var testingPartition = withRandom.filter(ee.Filter.gte('random', split));</code></pre>
 </section>
-<section id="applications" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
-<p>Sensor Invariant Atmospheric Correction SIAC is a way to better estimate the state of the atmosphere from EO images using Bayesian statistics and applying certain constraining assumptions to the estimates of aerosol optical thickness (AOT) and total column water vapour (TCWV), the most important atmospheric conditions which impact the relationship between Top of Atmosphere (TOA) and Bottom of Atmosphere (BOA) reflectance. This allows higher consistency across different EO missions’ imagery, especially Landsat and Sentinel-2, and through time and space, compared with more basic and commonly employed heuristic techniques <span class="citation" data-cites="yin_bayesian_2022">(<a href="references.html#ref-yin_bayesian_2022" role="doc-biblioref">Yin, Lewis, and Gómez-Dans 2022</a>)</span>. This paper is long and dense, and I plan to dig into it more later, but it’s very interesting to see something like this employed. I’m a fan of Bayesian methods generally.</p>
-<p>On the contrary, some analyses are interested in a very similar process of distinguishing the atmospheric effects from the surface reflectance for the opposite reason. To study the amount of aerosol pollution due to wildfires, <span class="citation" data-cites="lolli_characterizing_2024">Lolli et al. (<a href="references.html#ref-lolli_characterizing_2024" role="doc-biblioref">2024</a>)</span> constructed an index of sums of differences between clear and polluted days across certain bands which are known to be affected by wildfire smoke particulates. Interestingly, both groups of researchers employed AERONET stations (ground-based sensors that detect intensity of light incoming from the sun at a range of frequencies) to validate their results, whether they were attempting to remove the effects of the atmosphere or to isolate them.</p>
+<section id="applications" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
+<p><span class="citation" data-cites="farda_multi-temporal_2017">Farda (<a href="references.html#ref-farda_multi-temporal_2017" role="doc-biblioref">2017</a>)</span> tested a total of 10 different classification models available in GEE on the typical EO analysis task of land use classification for the purpose of comparison between them. CART performed the best with Random Forest and Voting SVM not far behind. They concluded that the more complex models could benefit from larger training sets, but within the constraints of the available resolution and GEE’s limitations simpler ones prevailed and performed pretty well.</p>
+<p><span class="citation" data-cites="choudhary_random_2022">Choudhary et al. (<a href="references.html#ref-choudhary_random_2022" role="doc-biblioref">2022</a>)</span> elected to use a a Random Forest model on Sentinel-2 data from GEE to predict rice yield from small farms in Guangdong Province, China. Lots of field work was involved in collecting the actual status of the rice fields, which was supported by the Guangdong Department of Agriculture. They used much more than 1000000 points and had to train the model outside of GEE, but achieved much more accurate results on test data than linear or single decision tree models. Maybe even the Random Forest model is complex enough to suffer from the limited training data allowed by GEE.</p>
 </section>
-<section id="reflection" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
-<p>I have a fair bit of experience with programmatic image processing, so none of this was new to me apart from the atmospheric correction. In the machine vision applications I have worked with before, there were always very consistently controlled and calibrated lighting conditions and calibration was only required annually or so as the LEDs slowly and evenly dimmed. The EO situation is obviously very different from that, but the idea of Multiple-Date Image Normalization appeals to me as a way to get a bit more consistent results, and I speculate that there should be a way to use a lot more of the image instead of just a few hand selected pseudo-invariant features. Some machine learning, or quantile regression across all the pixels maybe?</p>
+<section id="reflection" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
+<p>I really enjoy thinking about all the different types of models the relationships between them, since they’re all ultimately doing the same thing (splitting the feature space by predicted classes) but with different assumptions about the shape and firmness of the boundaries between them. In my (admittedly limited) experience with machine learning, XGBoost has been able to do anything Random Forest can do better than Random Forest can. Why is it not available in GEE? Why is is seemingly not so popular in remote sensing applications generally?</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-lolli_characterizing_2024" class="csl-entry" role="listitem">
-Lolli, Simone, Luciano Alparone, Alberto Arienzo, and Andrea Garzelli. 2024. <span>“Characterizing <span>Dust</span> and <span>Biomass</span> <span>Burning</span> <span>Events</span> from <span>Sentinel</span>-2 <span>Imagery</span>.”</span> <em>Atmosphere</em> 15 (6): 672. <a href="https://doi.org/10.3390/atmos15060672">https://doi.org/10.3390/atmos15060672</a>.
+<div id="ref-choudhary_random_2022" class="csl-entry" role="listitem">
+Choudhary, K., W. Shi, Y. Dong, and R. Paringer. 2022. <span>“Random <span>Forest</span> for Rice Yield Mapping and Prediction Using <span>Sentinel</span>-2 Data with <span>Google</span> <span>Earth</span> <span>Engine</span>.”</span> <em>Advances in Space Research</em> 70 (8): 2443–57. <a href="https://doi.org/10.1016/j.asr.2022.06.073">https://doi.org/10.1016/j.asr.2022.06.073</a>.
 </div>
-<div id="ref-yin_bayesian_2022" class="csl-entry" role="listitem">
-Yin, Feng, Philip E. Lewis, and Jose L. Gómez-Dans. 2022. <span>“Bayesian Atmospheric Correction over Land: <span>Sentinel</span>-2/<span>MSI</span> and <span>Landsat</span> 8/<span>OLI</span>.”</span> <em>Geoscientific Model Development</em> 15 (21): 7933–76. <a href="https://doi.org/10.5194/gmd-15-7933-2022">https://doi.org/10.5194/gmd-15-7933-2022</a>.
+<div id="ref-farda_multi-temporal_2017" class="csl-entry" role="listitem">
+Farda, N. M. 2017. <span>“Multi-Temporal <span>Land</span> <span>Use</span> <span>Mapping</span> of <span>Coastal</span> <span>Wetlands</span> <span>Area</span> Using <span>Machine</span> <span>Learning</span> in <span>Google</span> <span>Earth</span> <span>Engine</span>.”</span> <em>IOP Conference Series: Earth and Environmental Science</em> 98 (1): 012042. <a href="https://doi.org/10.1088/1755-1315/98/1/012042">https://doi.org/10.1088/1755-1315/98/1/012042</a>.
 </div>
 </div>
 </section>
@@ -658,13 +668,13 @@ Yin, Feng, Philip E. Lewis, and Jose L. Gómez-Dans. 2022. <span>“Bayesian Atm
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week2.html" class="pagination-link" aria-label="January 20th, 2026">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">January 20th, 2026</span></span>
+      <a href="./week5.html" class="pagination-link" aria-label="February 24th, 2026">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">February 24th, 2026</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week4.html" class="pagination-link" aria-label="February 10th, 2026">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">February 10th, 2026</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week7.html" class="pagination-link" aria-label="March 9, 2026">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">March 9, 2026</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

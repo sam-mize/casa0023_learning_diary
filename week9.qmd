@@ -10,8 +10,10 @@ Interferometric synthetic aperture radar (InSAR) is where it gets really interes
 
 ## Applications
 
+@ningthoujam_airborne_2016 evaluated predictive models of Above-Ground Biomass (AGB) in selected forests in the UK based on the S-band SAR backscatter collected from airplanes as part of the AirSAR Campaign. S-Band is considered suitable for forestry because it can penetrate through the canopy and interact with trunks and larger branches. HH and VV polarities showed the most promise, although they were both less accurate on older, higher AGB plots. Interestingly, they tended to be less accurate in opposite directions. Surely there's an obvious opportunity to construct a model that uses both HH and VV? And maybe also HV and VH?
 
+In contrast to that application, @noauthor_environmental_2019 employed satellite SAR from ERS-1/2, ENVISAT and Sentinel-1. They used both amplitude and phase data (primarily phase) to interferometrically determine the ground height in areas potentially affected by shale gas extraction. Earlier data from ERS 1/2 and ENVISAT provide a baseline from before the extraction began and Sentinel-1 provides an ongoing years-long time series. Although there has been increased seismic activity in those areas, the overall trend of ground motion is consistent with the baseline trajectory. According to the authors, this is important to monitor because some day it might not be, and also because many people falsely believe that it isn't now (as of 2019).
 
 ## Reflection
 
-
+I have used interferometric instruments fundamentally similar to InSAR, but with visible red laser light professionally to measure tiny deviations from straightness along bearing rails. It's very fiddly to set up in industrial environments, so it seems surprising at first that it works from space. Of course 5 cm is much more forgiving than 700 nm, but still it's in space. That's wild.
