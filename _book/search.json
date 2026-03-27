@@ -54,7 +54,7 @@
     "href": "index.html#sam-mize",
     "title": "CASA0023: Learning Diary",
     "section": "Sam Mize",
-    "text": "Sam Mize\nI’m a student learning about remotely sensing cities and environments in CASA0023.",
+    "text": "Sam Mize\nI’m a student learning about remotely sensing cities and environments in CASA0023. Prior to that I completed a BSME at North Carolina State University in December 2013 and have worked as a mechanical/controls engineer in the US aerospace and other manufacturing industries.",
     "crumbs": [
       "Introduction"
     ]
@@ -164,7 +164,7 @@
     "href": "week2.html#applications",
     "title": "2  January 20th, 2026",
     "section": "2.2 Applications",
-    "text": "2.2 Applications\nSun, Qi, and Huang (2020) found that combining data across both ICESat missions enabled them to estimate reforestation in remote area of China, which is useful for carbon balance estimations and general environmental monitoring.",
+    "text": "2.2 Applications\nAlthough ICESat and ICESat-2 were primarily intended to monitor ice in polar regions, many other uses have been found for the measurements they collected. Accuracy is typically much lower for snow depth measurements in mountainous areas further from the poles, because the passes are further apart and because the steepness of the terrain and presence of vegetation interferes with the reflection of light from the surface, but specialized filtering and aggregation methods applied to ICESat-2 data have improved accuracy in Western US states. Accuracy relative to in-situ measurement is still limited by the accuracy of the model of the underlying terrain, which is still somewhat affected by those same issues of steepness and vegetation even when it’s measured by aerial lidar. Sun, Qi, and Huang (2020) found that combining data across both ICESat missions enabled them to estimate reforestation at low (1km) resolution in remote area of China, which is useful for carbon balance estimations and general environmental monitoring, but again required specialized data processing and aggregation to overcome limitations (especially those of the original ICESat) and in-situ measurements to compare against.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>January 20th, 2026</span>"
     ]
@@ -174,7 +174,7 @@
     "href": "week2.html#reflection",
     "title": "2  January 20th, 2026",
     "section": "2.3 Reflection",
-    "text": "2.3 Reflection\nI have used similar devices (in principle, not precision or expense) and can easily see how having one in space would be useful. The higher precision and resolution of ICESat-2 has enabled more use in forestry on shorter timescales in addition to the primary ice-tracking goal of the mission. Maybe another 250-fold increase in resolution is right around the corner.\n\n\n\n\nSun, Tong, Jianbo Qi, and Huaguo Huang. 2020. “Discovering Forest Height Changes Based on Spaceborne Lidar Data of ICESat-1 in 2005 and ICESat-2 in 2019: A Case Study in the Beijing-Tianjin-Hebei Region of China.” Forest Ecosystems 7 (1): 53. https://doi.org/10.1186/s40663-020-00265-w.",
+    "text": "2.3 Reflection\nI have used similar devices (in principle, not precision or expense) to measure distances in my house for hanging wall art and various renovation projects, and have directly experienced the difficulty of achieving an accurate measurement on a sloped surface. Especially when you’re measuring a concave corner and the paint is glossy enough, you sometimes get a bit of a double-bounce. I can easily see how having one in space would be useful but tricky to employ. Snow is extremely important to the Western US, since water is often otherwise scarce there. And, for some reason, they don’t always get as much snow as they used to. Accurate monitoring should help those States better ration the use of their limited resource. The higher precision and resolution of ICESat-2 has enabled more use outside the primary ice-tracking goal of the mission. Maybe ICESat-3 with bring another 250-fold increase in resolution soon.\n\n\n\n\nSun, Tong, Jianbo Qi, and Huaguo Huang. 2020. “Discovering Forest Height Changes Based on Spaceborne Lidar Data of ICESat-1 in 2005 and ICESat-2 in 2019: A Case Study in the Beijing-Tianjin-Hebei Region of China.” Forest Ecosystems 7 (1): 53. https://doi.org/10.1186/s40663-020-00265-w.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>January 20th, 2026</span>"
     ]
@@ -214,7 +214,7 @@
     "href": "week3.html#applications",
     "title": "3  January 27th, 2026",
     "section": "3.2 Applications",
-    "text": "3.2 Applications",
+    "text": "3.2 Applications\nSensor Invariant Atmospheric Correction SIAC is a way to better estimate the state of the atmosphere from EO images using Bayesian statistics and applying certain constraining assumptions to the estimates of aerosol optical thickness (AOT) and total column water vapour (TCWV), the most important atmospheric conditions which impact the relationship between Top of Atmosphere (TOA) and Bottom of Atmosphere (BOA) reflectance. This allows higher consistency across different EO missions’ imagery, especially Landsat and Sentinel-2, and through time and space, compared with more basic and commonly employed heuristic techniques. This paper is long and dense, and I plan to dig into it more later, but it’s very interesting to see something like this employed. I’m a fan of Bayesian methods generally.\nOn the contrary, some analyses are interested in a very similar process of distinguishing the atmospheric effects from the surface reflectance for the opposite reason. To study the amount of aerosol pollution due to wildfires, [citation] constructed an index of sums of differences between clear and polluted days across certain bands which are known to be affected by wildfire smoke particulates. Interestingly, both groups of researchers employed AERONET stations (ground-based sensors that detect intensity of light incoming from the sun at a range of frequencies) to validate their results, whether they were attempting to remove the effects of the atmosphere or to isolate them.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>January 27th, 2026</span>"
     ]
@@ -254,7 +254,7 @@
     "href": "week5.html#applications",
     "title": "5  February 24th, 2026",
     "section": "5.2 Applications",
-    "text": "5.2 Applications",
+    "text": "5.2 Applications\nAs a demonstration of the power and potential of GEE, [citation] employed it to apply an evapotranspiration method devised and tested on certain regions in the United States to the entire globe rapidly and easily. Working with derived datasets served by GEE, they could simply apply the published formula at the available resolution and compare results with in situ measurements collected at certain points around the world.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>February 24th, 2026</span>"
     ]

@@ -10,8 +10,13 @@ As a demonstration of some techniques, we found the average temperature per post
 
 ## Applications
 
+[citation] employed MODIS LST bands to analyze the strength of correlation between heatwave days (which are increasingly common) and high LST anomalies, detectable at such temporal resolution because of the low return time of the MODIS mission satellites. Surprisingly, only about half of heatwave days were also days with anomalously high LST. My intuition that nearly all heatwave days should have high LST was only shown to be true during the later parts of long heatwaves. The degree to which LST and air temperature can differ is not intuitive to me. Of course all of this depends on the exact definition of "heatwave" used, and is limited by the spatial resolution of MODIS. The correlation between LST on some land cover types and heatwave days may be tighter, but MODIS pixels generally are large enough to unavoidably contain a mix of different land cover.
 
+Despite it's relative infrequency, Landsat's thermal band data is more suited than anything else to monitoring soil moisture and evapotranspiration in US agricultural contexts [citation]. As fresh water resources continue to dwindle in the US and around the world, this monitoring offers opportunities for better management of those resources. In particular, it can help distinguish between consumptive irrigation (lost to evaporation, and therefore lowering the temperature of the irrigated fields) and total pumping from rivers in the West. Some of the pumped water eventually flows back into the same river, and determining that proportion is important for water conservation policies concerning irrigation. 
 
 ## Reflection
 
+It seems like we can map and quantify the problems discussed in the papers above with increasingly unnecessary and at times darkly humorous precision, but never as a species actually do anything to fix them.
+
+As an example, the State of Idaho offered to pay a farmer not to irrigate, but they would only compensate him for his typical consumptive irrigation, not the total amount pumped. Consequently he decided not to participate in the program. [citation] presents this as an example of EO data supporting wise use of public money, but I see it as a useless government begging someone to pretty please slow down destroying our home in exchange for a big bag of money and then leaving when the environmental bandit is scornful of the offered bribe. This is obviously totally backwards. Why isn't the farmer paying the state to use some of the very limited water? Or better yet not farming in Idaho because the limited water is too expensive?
 

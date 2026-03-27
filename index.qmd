@@ -6,4 +6,4 @@ It's module number 0023 in CASA, and its subject is remotely sensing cities and 
 
 ## Sam Mize
 
-I'm a student learning about remotely sensing cities and environments in CASA0023.
+I'm a student learning about remotely sensing cities and environments in CASA0023. Prior to that I completed a BSME at North Carolina State University in December 2013 and have worked as a mechanical/controls engineer in the US aerospace and other manufacturing industries.

@@ -12,7 +12,10 @@ The main task of the practical was combining multiple tiles into a mosaiced imag
 
 ## Applications
 
+As a demonstration of the power and potential of GEE (at the time, recently released), [citation] employed it to apply an evapotranspiration method devised and tested on certain regions in the United States to the entire globe rapidly and easily. Working with derived datasets served by GEE, they could simply apply the published formula at the available resolution and compare results with *in situ* measurements collected at certain points around the world.
 
+Around the same time, [citation] developed a much more involved tool in GEE: Google Earth Engine Mangrove Mapping Methodology (GEEMMM). The development of this tool involved producing generalized code to filter to areas of interest, further filter by elevation and slope, remove clouds and water, and train a random forest model to classify the landcover type with a focus on distinguishing mangrove forests from everything else. This wide variety of complexity from early on in GEE's history demonstrates it's wide appeal and versatility.
 
 ## Reflection
 
+I'm generally excited about working with GEE. Although I'm arriving a bit later on the scene this time, it reminds me of when I first installed Google Earth on my family PC in 2005. With the massive proliferation and decentralization of EO data and analysis through GEE, it seems difficult to avoid significant duplication of effort. It may also be more difficult to verify the reliability of various analyses presented, since it's so easy for anyone to carry out.
