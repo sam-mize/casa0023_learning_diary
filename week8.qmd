@@ -1,0 +1,17 @@
+---
+title: "March 16, 2026"
+---
+
+## Summary
+
+This week was all about temperature data, which is captured by both Landsat and Moderate Resolution Imaging Spectroradiometer (MODIS). Landsat has much better spatial resolution (30 m vs 1 km), but much worse temporal resolution (16 days vs generally 0.5 days). The thermal bands need to be scaled according to the documentation and then converted from K to °C by subtracting 273.1. Or, of course, you might want to work with the temperature in K if you're doing some kind of analysis of emissivity or heat exchange.
+
+As a demonstration of some techniques, we found the average temperature per postcode area in London, split the postcode areas by quantiles, and plotted the results on a map both in R and in GEE. Both versions are weird in how they handle the edges of the quantiles. The R version seems to assume that the ranges are inclusive on both ends, and compensate for that by separating the ranges by an arbitrary 0.01%, but the GEE version is exclusive on both ends of the ranges except for the final one. It seems that some postcode area(s) could potentially slip through the cracks in both versions. Oops.
+
+## Applications
+
+
+
+## Reflection
+
+

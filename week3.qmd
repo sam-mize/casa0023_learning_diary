@@ -2,12 +2,16 @@
 title: "January 27th, 2026"
 ---
 
-# Summary
+## Summary
 
-Many corrections are performed on the raw satellite imagery to produce the ground-level reflectance values we're typically interested in. Generally speaking, it's best to get "analysis-ready" imagery which already has these corrections performed. Despite all the corrections applied, the data will not perfectly match up from one tile to the next or from one pass to the next. For merging multiple tiles together, many different methods could be used, but mean and median are typical. Once the channels/bands of the image are assembled, more can easily be created by mathematically combining the existing ones. Also, convolutions with various kernels can reveal underlying features of the imagery.
+Many corrections are performed on the raw satellite imagery to produce the ground-level reflectance values we're typically interested in. Generally speaking, it's best to get "analysis-ready" imagery which already has these corrections performed. The Dark Object Subtraction (DOS) method presented in the week's practical seems pretty obviously flawed; how can we be sure that each image contains some of what should be considered the least reflective surface? Despite all the corrections applied, the data will not perfectly match up from one tile to the next or from one pass to the next. This is because we generally do not have sufficient data on the state of the atmosphere in every particular time and place to perfectly calculate and remove all its effects and must rely on relative corrections. Better, more absolute, calibration is possible if targets of known reflectivity are positioned in view of an EO instrument passing overhead.
 
-# Applications
+For merging multiple overlapping EO image tiles together, many different methods could be used, but mean and median are typical options. I wonder if something like a harmonic mean might work better than either median or arithmetic mean? Once the channels/bands of the image are assembled, more can easily be created by mathematically combining the existing ones pixel-wise. Also, convolutions across multiple pixels with various kernels can reveal underlying features of the imagery, such as high-pass, low-pass, or specific textures.
 
-# Reflection
+## Applications
 
-I have a fair bit of experience with programmatic image processing.
+
+
+## Reflection
+
+I have a fair bit of experience with programmatic image processing, so none of this was new to me apart from the atmospheric correction. In the machine vision applications I have worked with before, there were always very consistently controlled and calibrated lighting conditions and calibration was only required annually or so as the LEDs slowly and evenly dimmed. The EO situation is obviously very different from that, but the idea of Multiple-Date Image Normalization appeals to me as a way to get a bit more consistent results, and I speculate that there should be a way to use a lot more of the image instead of just a few hand selected pseudo-invariant features. Some machine learning, or quantile regression across all the pixels maybe?

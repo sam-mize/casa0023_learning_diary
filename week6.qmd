@@ -2,14 +2,29 @@
 title: "March 2, 2026"
 ---
 
-# Summary
+## Summary
 
-Random Classic image segmentation techniques (CART, Random Forest, NaiveBayes and SVM) are available for use in Google Earth Engine, on up to 1,000,000 points at a time. 1,000,000 is really not many. That's a 1MP photo, like a 20-year-old phone camera. I used to work with at least 5MP industrial machine vision cameras, and sometimes trained models for those images on a laptop. It seems Google is not being particularly generous with the cloud computing resources, but it should at least be fast to train.
+Classic image segmentation techniques (Classification and Regression Tree, Random Forest, Naive Bayes and Support Vector Machines) are available for use in Google Earth Engine, on up to 1,000,000 points at a time. 1,000,000 is really not many. That's a 1MP photo, like a mobile phone camera as old as some of the students in the program. I used to work with at least 5MP industrial machine vision cameras, and sometimes trained models for those images on a laptop. It seems Google is not being particularly generous with the cloud computing resources, but it should at least be fast to train.
 
-# Applications
+Training machine learning models in general required reserving some (here 30%, but I've seen less than that in other contexts) of the data as a test set (and sometimes further reserving more data as a validation set, although we didn't explicitly do this in the practical). A major difference could be observed in performance when the test-train split was done on the polygon level or on the individual pixel level. I expected pixel-wise to be better, but I did not expect such a stark difference. I noticed that there's a totally obvious error in the code for the polygon-wise split too, which might be part of the issue. The split is actually 50/50 rather than 70/30, so the model is only getting to see half of the data.
 
-\@choudhary_random_2022 trained a Random Forest model on Sentinel-2 data from GEE to predict rice yield from small farms in Guangdong Province, China. Lots of field work was involved in collecting the actual status of the rice fields, which was supported by the Guangdong Department of Agriculture. They used much more than 1000000 points and had to train the model outside of GEE, but achieved much more accurate results on test data than linear or single decision tree models.
+```{}
+// // --------------------- train, test split --------------------------------
 
-# Reflection
+// We want to reserve some of the data for testing, to avoid overfitting the model.
+var split = 0.5;  // Roughly 70% training, 30% testing.
+//           ↑
+//     THIS HERE IS WRONG
+
+
+var trainingPartition = withRandom.filter(ee.Filter.lt('random', split));
+var testingPartition = withRandom.filter(ee.Filter.gte('random', split));
+```
+
+## Applications
+
+@choudhary_random_2022 trained a Random Forest model on Sentinel-2 data from GEE to predict rice yield from small farms in Guangdong Province, China. Lots of field work was involved in collecting the actual status of the rice fields, which was supported by the Guangdong Department of Agriculture. They used much more than 1000000 points and had to train the model outside of GEE, but achieved much more accurate results on test data than linear or single decision tree models.
+
+## Reflection
 
 This sort of approach seems pretty straightforward and foolproof.

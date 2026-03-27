@@ -1,0 +1,19 @@
+---
+title: "March 9, 2026"
+---
+
+## Summary
+
+This week covered many additional methods for image classification, in particular sub-pixel methods and object-based classification. 
+
+"Sub-pixel methods" in this context has a bit of a different meaning from what I've encountered before. It's a similar idea but the goal is to un-mix the spectral signatures that could have combined to produce each pixels' overall spectrum, whereas I knew it as a way of measuring the size or position of an object within a photograph with greater precision than the size of a pixel. Both rely on the assumption that the overall value of each channel is a linear combination of two or more different true values scaled by the proportion of the area of the pixel covered by the types of things which produce those true values. In the practical, we used "unmix" in GEE to generate predicted portions of each pixel belonging to each of 4 "endmembers" (then merged 2 of them into 1 for a final count of 3). When hardening the predictions to generate a confusion matrix, we were instructed to use a threshold of 50% for each of the 4 endmembers. I'm not sure I like that. It kind of seems like the classification should be selected based on whichever endmember's predicted contribution to the overall pixel is highest even if none is more than 50%. Some pixels may not be classified at all with a 50% threshold and more than 2 endmembers, right?
+
+Object-based classification requires the clustering of close and similar pixels into groups (objects) and training a classifier on the characteristics of the objects within the image instead of on the pixels. There are many ways of clustering pixels into objects, including K-means and Simple Non-Iterative Clustering (SNIC) which we covered in the practical, but they all do generally the same process of finding groupings of similar pixels and calculating features of the combined objects. A potential advantage is that the shape characteristics of the objects can be included as features for the classification. This seems very useful for built environment classifications because of all the distinct and high-contrast shapes involved.
+
+## Applications
+
+
+
+## Reflection
+
+

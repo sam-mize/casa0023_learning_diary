@@ -1,20 +1,24 @@
 ---
 title: "January 20th, 2026"
+editor_options: 
+  chunk_output_type: console
 ---
 
-# Summary
+## Summary
 
 NASA's Ice, Cloud, and Land Elevation Satellite (ICESat) launched in 2002 and collected data using its Geoscience Laser Altimeter System (GLAS) instrumentation between 2003 and 2010, when it ceased functioning. Its successor, ICESat-2, has replaced it since 2018. Fundamentally, both measure the distance from the satellite instrumentation to the Earth's surface by shooting pulses of laser light at the Earth and recording the time required for the reflection of the laser to reach a telescope mounted parallel to the laser. On-board processing is used to detect the pulses approximately and select the regions of data to transmit to the ground for more refined processing. ICESat could only handle 40 pulses per second, but ICESat-2 can do 10000. Consequently, ICESat-2 collects 250 times more points along the same path length. The original could measure with about 10 cm resolution, and the current resolution is about 5 mm.
 
-```         
+``` {r echo=FALSE}
+library(xaringan)
+library(xaringanExtra)
 xaringanExtra::embed_xaringan(url = "https://sam-mize.github.io/casa0023/slideshow.html#1",
                               ratio = "16:9")
 ```
 
-# Applications
+## Applications
 
-@sunDiscoveringForestHeight2020 found that combining data across both ICESat missions enabled them to estimate reforestation in remote area of China, which is important knowledge for carbon balance and general environmental science.
+@sunDiscoveringForestHeight2020 found that combining data across both ICESat missions enabled them to estimate reforestation in remote area of China, which is useful for carbon balance estimations and general environmental monitoring.
 
-# Reflection
+## Reflection
 
-I have use similar devices (in priciple, not precision or expense) and can easily see how having one in space would be useful. The higher precision and resolution of ICESat-2 has enabled more use in forestry on shorter timescales in addition to the primary ice-tracking goal of the mission. Maybe another 250-fold increase in resolution is right around the corner.
+I have used similar devices (in principle, not precision or expense) and can easily see how having one in space would be useful. The higher precision and resolution of ICESat-2 has enabled more use in forestry on shorter timescales in addition to the primary ice-tracking goal of the mission. Maybe another 250-fold increase in resolution is right around the corner.

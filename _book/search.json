@@ -34,7 +34,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Persson, Magnus, Eva Lindberg, and Heather Reese. 2018. “Tree\nSpecies Classification with Multi-Temporal Sentinel-2\nData.” Remote Sensing 10 (11): 1794. https://doi.org/10.3390/rs10111794.\n\n\nSun, Tong, Jianbo Qi, and Huaguo Huang. 2020. “Discovering Forest\nHeight Changes Based on Spaceborne Lidar Data of ICESat-1\nin 2005 and ICESat-2 in 2019: A Case Study in the\nBeijing-Tianjin-Hebei Region of China.”\nForest Ecosystems 7 (1): 53. https://doi.org/10.1186/s40663-020-00265-w.",
+    "text": "Choudhary, K., W. Shi, Y. Dong, and R. Paringer. 2022. “Random\nForest for Rice Yield Mapping and Prediction Using\nSentinel-2 Data with Google Earth\nEngine.” Advances in Space Research 70 (8):\n2443–57. https://doi.org/10.1016/j.asr.2022.06.073.\n\n\nPersson, Magnus, Eva Lindberg, and Heather Reese. 2018. “Tree\nSpecies Classification with Multi-Temporal Sentinel-2\nData.” Remote Sensing 10 (11): 1794. https://doi.org/10.3390/rs10111794.\n\n\nSun, Tong, Jianbo Qi, and Huaguo Huang. 2020. “Discovering Forest\nHeight Changes Based on Spaceborne Lidar Data of ICESat-1\nin 2005 and ICESat-2 in 2019: A Case Study in the\nBeijing-Tianjin-Hebei Region of China.”\nForest Ecosystems 7 (1): 53. https://doi.org/10.1186/s40663-020-00265-w.",
     "crumbs": [
       "References"
     ]
@@ -74,7 +74,7 @@
     "href": "week1.html",
     "title": "1  January 13, 2026",
     "section": "",
-    "text": "2 Summary\nRemote Sensing (since we’re mostly remotely sensing Earth, used interchangeably with “Earth Observation”) is acquisition of information from a distance using sensors. Typically, we’ll be working with data from satellites, although planes, drones, and anything else with any kind of sensor could potentially be used. Lidar data is point clouds, but we’ll typically be working with raster data. Even if we do use Lidar, it can usually be converted to a raster heightmap. A variety of observation satellites provide raster data with varying resolutions analogous to more typical video data:\n\nSpatial Resolution (10~60m depending on source and spectral band) ≈ video resolution\nSpectral Resolution (visible plus longer and sometimes shorter bands) ≈ color channels\nTemporal Resolution (1~16 days for satellite) ≈ frame rate\nRadiometric Resolution (4~12 bits maybe) ≈ bit depth\n\nEarth’s atmosphere interferes differently with transmission of different wavelengths of light. Typically, we’ll be working with data which has been processed to control for those effects and “reflect” the surface of Earth as if the atmosphere was perfectly transparent to all wavelengths. Sometimes things that appear similar to our eyes affect light outside the visible spectrum very differently, allowing them to be easily distinguished by a specific spectral band. In other cases more subtle differences in a variety of frequency bands (a “spectral signature”), analogous to a frequency-response in acoustics, circuit analysis, vibration analysis, or controls engineering, might distinguish them. A trivial example presented in the introductory lecture and practical is that foliage appears very bright in the near infrared (NIR) band, but dark in blue and green.\n\nIn the lecture, it was recommended to use multiple tiles from time-adjacent passes and take the median value for each pixel. Why? If you’re working with 4-bit radiometric resolution and you have [B1111, B1111, B1111, B1111, B1001, B1000, B1000], you don’t want B1111 = 15 unless you’re studying clouds, and why use B1000 = 8 when you can use 8.33? Presumably everything is getting converted to floating point arrays anyway for analysis?\n\n\n3 Applications\nPersson, Lindberg, and Reese (2018) trained a random forest model to predict specific tree species using various sets of frequency bands available from Sentinel-2 to narrow down which specific bands are most important for that task in the context of central Sweden. They found that the set of 13 spectral bands provided reasonably good accuracy, but stressed the importance of using imagery from the seasons at which the foliage is most distinguishable, in the early spring, late spring, and fall. Just as mentioned in the intro lecture, the researchers derived spectral signatures characteristic of each species of interest. The results here are interesting and maybe useful in Sweden or other places where large areas of forests are mostly the same species. North America, especially east of the Rocky Mountains has very mixed forests which would likely not be distinguishable without better spatial resolution. \n[This](https://www.github.com/sentinel-hub/natural-color)[https://www.github.com/sentinel-hub/natural-color[https://www.github.com/sentinel-hub/natural-color)) contains some examples and scripts developed to transform Sentinel color channels into more natural (to human perception) sRGB channels. This could be useful for presentations, because I’ve noticed the odd coloration makes the satellite images feel a bit detached from reality to me, like an over-saturated game or something. I imagine presentations featuring what a person feels like they would perceive if they were personally flying high overhead are more psychologically affecting, whether strictly scientifically relevant or not.\n\n\n\n\n4 Reflection\nMy brother is a forester, responsible for evaluating forest tracts for specific purposes: timber value, suitable habitat for specific wildlife, and most recently for forestry-based carbon credits. I think his industry could use more and better EO than what they currently do. For now, remote sensing is not directly applied to the tracts for which carbon credits are issued. Instead foresters directly measure every tree within randomly selected plots of the tracts. Because that’s expensive, it’s only done once every 5 years. The owners of the land are supposed to be paid for their carbon sequestration every year, so the administrators of the credits rely on predicted growth rates for the in-between years. Accumulated error in the prediction has to be made-up when the 5-year cycle ends. Maybe using EO data and a prediction model that would update every time the satellite passed by (or at least more frequently than every 5 years) could reduce the error and enable more consistent and reliable payments. \n\n\n\n\nPersson, Magnus, Eva Lindberg, and Heather Reese. 2018. “Tree Species Classification with Multi-Temporal Sentinel-2 Data.” Remote Sensing 10 (11): 1794. https://doi.org/10.3390/rs10111794.",
+    "text": "1.1 Summary\nRemote Sensing (since we’re mostly remotely sensing Earth, used interchangeably with “Earth Observation”) is acquisition of information from a distance using sensors. Typically, we’ll be working with data from satellites, although planes, drones, and anything else with any kind of sensor could potentially be used. Lidar data is point clouds, but we’ll typically be working with raster data. Even if we do use Lidar, it can usually be converted to a raster heightmap. A variety of observation satellites provide raster data with varying resolutions analogous to more typical video data:\nEarth’s atmosphere interferes differently with transmission of different wavelengths of light. Typically, we’ll be working with data which has been processed to control for those effects and “reflect” the surface of Earth as if the atmosphere was perfectly transparent to all wavelengths. Sometimes things that appear similar to our eyes affect light outside the visible spectrum very differently, allowing them to be easily distinguished by a specific spectral band. In other cases more subtle differences in a variety of frequency bands (a “spectral signature”), analogous to a frequency-response in acoustics, circuit analysis, vibration analysis, or controls engineering, might distinguish them. A trivial example presented in the introductory lecture and practical is that foliage appears very bright in the near infrared (NIR) band, but dark in blue and green.\nIn the lecture, it was recommended to use multiple tiles from time-adjacent passes and take the median value for each pixel. Why? If you’re working with 4-bit radiometric resolution and you have [B1111, B1111, B1111, B1111, B1001, B1000, B1000], you don’t want B1111 = 15 unless you’re studying clouds, and why use B1000 = 8 when you can use 8.33? Presumably everything is getting converted to floating point arrays anyway for analysis?",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>January 13, 2026</span>"
     ]
@@ -82,31 +82,31 @@
   {
     "objectID": "week1.html#summary",
     "href": "week1.html#summary",
-    "title": "1  Week 1",
+    "title": "1  January 13, 2026",
     "section": "",
     "text": "Spatial Resolution (10~60m depending on source and spectral band) ≈ video resolution\nSpectral Resolution (visible plus longer and sometimes shorter bands) ≈ color channels\nTemporal Resolution (1~16 days for satellite) ≈ frame rate\nRadiometric Resolution (4~12 bits maybe) ≈ bit depth",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 1</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>January 13, 2026</span>"
     ]
   },
   {
     "objectID": "week1.html#applications",
     "href": "week1.html#applications",
-    "title": "1  Week 1",
+    "title": "1  January 13, 2026",
     "section": "1.2 Applications",
-    "text": "1.2 Applications\nPersson, Lindberg, and Reese (2018) trained a random forest model to predict specific tree species using various sets of frequency bands available from Sentinel-2 to narrow down which specific bands are most important for that task in the context of central Sweden. They found that the set of 13 spectral bands provided reasonably good accuracy, but stressed the importance of using imagery from the seasons at which the foliage is most distinguishable, in the early spring, late spring, and fall. Just as mentioned in the intro lecture, the researchers derived spectral signatures characteristic of each species of interest. The results here are interesting and maybe useful in Sweden or other places where large areas of forests are mostly the same species. North America, especially east of the Rocky Mountains has very mixed forests which would likely not be distinguishable without better spatial resolution. \n[This](https://www.github.com/sentinel-hub/natural-color)[https://www.github.com/sentinel-hub/natural-color[https://www.github.com/sentinel-hub/natural-color)) contains some examples and scripts developed to transform Sentinel color channels into more natural (to human perception) sRGB channels. This could be useful for presentations, because I’ve noticed the odd coloration makes the satellite images feel a bit detached from reality to me, like an over-saturated game or something. I imagine presentations featuring what a person feels like they would perceive if they were personally flying high overhead are more psychologically affecting, whether strictly scientifically relevant or not.",
+    "text": "1.2 Applications\nPersson, Lindberg, and Reese (2018) trained a random forest model to predict specific tree species using various sets of frequency bands available from Sentinel-2 to narrow down which specific bands are most important for that task in the context of central Sweden. They found that the set of 13 spectral bands provided reasonably good accuracy, but stressed the importance of using imagery from the seasons at which the foliage is most distinguishable, in the early spring, late spring, and fall. Just as mentioned in the intro lecture, the researchers derived spectral signatures characteristic of each species of interest. The results here are interesting and maybe useful in Sweden or other places where large areas of forests are mostly the same species. North America, especially east of the Rocky Mountains has very mixed forests which would likely not be distinguishable without better spatial resolution.\n[This](https://www.github.com/sentinel-hub/natural-color)[https://www.github.com/sentinel-hub/natural-color[https://www.github.com/sentinel-hub/natural-color)) contains some examples and scripts developed to transform Sentinel color channels into more natural (to human perception) sRGB channels. This could be useful for presentations, because I’ve noticed the odd coloration makes the satellite images feel a bit detached from reality to me, like an over-saturated game or something. I imagine presentations featuring what a person feels like they would perceive if they were personally flying high overhead are more psychologically affecting, whether strictly scientifically relevant or not.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 1</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>January 13, 2026</span>"
     ]
   },
   {
     "objectID": "week1.html#reflection",
     "href": "week1.html#reflection",
-    "title": "1  Week 1",
+    "title": "1  January 13, 2026",
     "section": "1.3 Reflection",
     "text": "1.3 Reflection\nMy brother is a forester, responsible for evaluating forest tracts for specific purposes: timber value, suitable habitat for specific wildlife, and most recently for forestry-based carbon credits. I think his industry could use more and better EO than what they currently do. For now, remote sensing is not directly applied to the tracts for which carbon credits are issued. Instead foresters directly measure every tree within randomly selected plots of the tracts. Because that’s expensive, it’s only done once every 5 years. The owners of the land are supposed to be paid for their carbon sequestration every year, so the administrators of the credits rely on predicted growth rates for the in-between years. Accumulated error in the prediction has to be made-up when the 5-year cycle ends. Maybe using EO data and a prediction model that would update every time the satellite passed by (or at least more frequently than every 5 years) could reduce the error and enable more consistent and reliable payments. \n\n\n\n\nPersson, Magnus, Eva Lindberg, and Heather Reese. 2018. “Tree Species Classification with Multi-Temporal Sentinel-2 Data.” Remote Sensing 10 (11): 1794. https://doi.org/10.3390/rs10111794.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 1</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>January 13, 2026</span>"
     ]
   },
   {
@@ -114,7 +114,7 @@
     "href": "week2.html",
     "title": "2  January 20th, 2026",
     "section": "",
-    "text": "3 Summary\nNASA’s Ice, Cloud, and Land Elevation Satellite (ICESat) launched in 2002 and collected data using its Geoscience Laser Altimeter System (GLAS) instrumentation between 2003 and 2010, when it ceased functioning. Its successor, ICESat-2, has replaced it since 2018. Fundamentally, both measure the distance from the satellite instrumentation to the Earth’s surface by shooting pulses of laser light at the Earth and recording the time required for the reflection of the laser to reach a telescope mounted parallel to the laser. On-board processing is used to detect the pulses approximately and select the regions of data to transmit to the ground for more refined processing. ICESat could only handle 40 pulses per second, but ICESat-2 can do 10000. Consequently, ICESat-2 collects 250 times more points along the same path length. The original could measure with about 10 cm resolution, and the current resolution is about 5 mm.\nxaringanExtra::embed_xaringan(url = \"https://sam-mize.github.io/casa0023/slideshow.html#1\",\n                              ratio = \"16:9\")\n\n\n4 Applications\nSun, Qi, and Huang (2020) found that combining data across both ICESat missions enabled them to estimate reforestation in remote area of China, which is important knowledge for carbon balance and general environmental science.\n\n\n5 Reflection\nI have use similar devices (in priciple, not precision or expense) and can easily see how having one in space would be useful. The higher precision and resolution of ICESat-2 has enabled more use in forestry on shorter timescales in addition to the primary ice-tracking goal of the mission. Maybe another 250-fold increase in resolution is right around the corner.\n\n\n\n\nSun, Tong, Jianbo Qi, and Huaguo Huang. 2020. “Discovering Forest Height Changes Based on Spaceborne Lidar Data of ICESat-1 in 2005 and ICESat-2 in 2019: A Case Study in the Beijing-Tianjin-Hebei Region of China.” Forest Ecosystems 7 (1): 53. https://doi.org/10.1186/s40663-020-00265-w.",
+    "text": "2.1 Summary\nNASA’s Ice, Cloud, and Land Elevation Satellite (ICESat) launched in 2002 and collected data using its Geoscience Laser Altimeter System (GLAS) instrumentation between 2003 and 2010, when it ceased functioning. Its successor, ICESat-2, has replaced it since 2018. Fundamentally, both measure the distance from the satellite instrumentation to the Earth’s surface by shooting pulses of laser light at the Earth and recording the time required for the reflection of the laser to reach a telescope mounted parallel to the laser. On-board processing is used to detect the pulses approximately and select the regions of data to transmit to the ground for more refined processing. ICESat could only handle 40 pulses per second, but ICESat-2 can do 10000. Consequently, ICESat-2 collects 250 times more points along the same path length. The original could measure with about 10 cm resolution, and the current resolution is about 5 mm.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>January 20th, 2026</span>"
     ]
@@ -124,7 +124,7 @@
     "href": "week3.html",
     "title": "3  January 27th, 2026",
     "section": "",
-    "text": "4 Summary\nMany corrections are performed on the raw satellite imagery to produce the ground-level reflectance values we’re typically interested in. Generally speaking, it’s best to get “analysis-ready” imagery which already has these corrections performed. Despite all the corrections applied, the data will not perfectly match up from one tile to the next or from one pass to the next. For merging multiple tiles together, many different methods could be used, but mean and median are typical. Once the channels/bands of the image are assembled, more can easily be created by mathematically combining the existing ones. Also, convolutions with various kernels can reveal underlying features of the imagery.\n\n\n5 Applications\n\n\n6 Reflection\nI have a fair bit of experience with programmatic image processing.",
+    "text": "3.1 Summary\nMany corrections are performed on the raw satellite imagery to produce the ground-level reflectance values we’re typically interested in. Generally speaking, it’s best to get “analysis-ready” imagery which already has these corrections performed. The Dark Object Subtraction (DOS) method presented in the week’s practical seems pretty obviously flawed; how can we be sure that each image contains some of what should be considered the least reflective surface? Despite all the corrections applied, the data will not perfectly match up from one tile to the next or from one pass to the next. This is because we generally do not have sufficient data on the state of the atmosphere in every particular time and place to perfectly calculate and remove all its effects and must rely on relative corrections. Better, more absolute, calibration is possible if targets of known reflectivity are positioned in view of an EO instrument passing overhead.\nFor merging multiple overlapping EO image tiles together, many different methods could be used, but mean and median are typical options. I wonder if something like a harmonic mean might work better than either median or arithmetic mean? Once the channels/bands of the image are assembled, more can easily be created by mathematically combining the existing ones pixel-wise. Also, convolutions across multiple pixels with various kernels can reveal underlying features of the imagery, such as high-pass, low-pass, or specific textures.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>January 27th, 2026</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "week4.html",
     "title": "4  February 10th, 2026",
     "section": "",
-    "text": "5 Summary\nMy hometown of Burlington, North Carolina, USA has a Comprehensive Plan which includes a set of roadway corridors which are aesthetically in need of redevelopment, as well as a goal of improving the urban environment and reducing the UHI effect by planting public street trees and encouraging (or requiring) property developers to include trees. They say that future growth should occur within the boundaries of the city for the foreseeable future to avoid developing any more of the peripheral agricultural land. They’ve had this plan in its current iteration for over a decade, and you would never know from seeing the town. Greenfield developments on the edge of town have carried on. I think they have made some slight progress on the tree planting, and maybe a very small amount of progress on the redevelopment along the target corridors, but it’s still really bad. I think the city council has mostly good ideas in their Comprehensive Plan, but the implementation seems hopelessly slow. Maybe incorporating EO data could help to better target efforts. Or maybe it could provide better evidence of whatever progress has been made to keep people like me from giving up on it and moving away.\n\n\n6 Applications\nNo remote sensing data can “solve” a policy challenge on its own, and my view is that it’s generally unlikely to be helpful to analyze each individual city exhaustively when there are well known and frankly obvious ways to improve local conditions generally. There’s so much low-hanging fruit which has been totally neglected for decades. That said, Landsat temperature band data could be incorporated into these redevelopment projects, as a way of identifying the highest priority areas for redevelopment based on their contributions to the UHI effect based on the surface temperature. NIR data could assist in identifying areas most in need of vegetation. I really don’t think the remote sensing is necessary for policymakers, but it might help to provide evidence to doubtful constituents so they’ll allow a bit more progress for a bit more time than they otherwise might.\n\n\n7 Reflection\nI was very surprised to see that the Burlington City Council officially has a plan that generally seems intelligent and informed, comporting with the UN new urban agenda and, in direction if not in magnitude, with my preferences. The actual condition of the city is the opposite of all that, and the trend has been toward sprawl and auto-centrality since about 1920. I was even more surprised to see that the public was generally supportive, according to polling the Council reported that they had done on general new urbanism topics. My impression of the public is not generally positive, especially in the US, and more especially in Burlington, because what I see more of is people using any means available to them to aggressively oppose even the faintest, most watered-down and incrementalist bit of progress at every turn. Maybe my impression of the general public attitude is part of a situation of pluralistic ignorance, and more community building within the citizenry could dispell that. Assuming the Councilors meant what they wrote in their policy at all, whatever tools can help them achieve their goals faster will be a huge help to the city.",
+    "text": "4.1 Summary\nMy hometown of Burlington, North Carolina, USA has a Comprehensive Plan which includes a set of roadway corridors which are aesthetically in need of redevelopment, as well as a goal of improving the urban environment and reducing the UHI effect by planting public street trees and encouraging (or requiring) property developers to include trees. They say that future growth should occur within the boundaries of the city for the foreseeable future to avoid developing any more of the peripheral agricultural land. They’ve had this plan in its current iteration for over a decade, and you would never know from seeing the town. Greenfield developments on the edge of town have carried on. I think they have made some slight progress on the tree planting, and maybe a very small amount of progress on the redevelopment along the target corridors, but it’s still really bad. I think the city council has mostly good ideas in their Comprehensive Plan, but the implementation seems hopelessly slow. Maybe incorporating EO data could help to better target efforts. Or maybe it could provide better evidence of whatever progress has been made to keep people like me from giving up on it and moving away.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>February 10th, 2026</span>"
     ]
@@ -144,7 +144,7 @@
     "href": "week5.html",
     "title": "5  February 24th, 2026",
     "section": "",
-    "text": "6 Summary\nMy hometown of Burlington, North Carolina, USA has a Comprehensive Plan which includes a set of roadway corridors which are aesthetically in need of redevelopment, as well as a goal of improving the urban environment and reducing the UHI effect by planting public street trees and encouraging (or requiring) property developers to include trees. They say that future growth should occur within the boundaries of the city for the foreseeable future to avoid developing any more of the peripheral agricultural land. They’ve had this plan in its current iteration for over a decade, and you would never know from seeing the town. Greenfield developments on the edge of town have carried on. I think they have made some slight progress on the tree planting, and maybe a very small amount of progress on the redevelopment along the target corridors, but it’s still really bad. I think the city council has mostly good ideas in their Comprehensive Plan, but the implementation seems hopelessly slow. Maybe incorporating EO data could help to better target efforts. Or maybe it could provide better evidence of whatever progress has been made to keep people like me from giving up on it and moving away.\n\n\n7 Applications\nNo remote sensing data can “solve” a policy challenge on its own, and my view is that it’s generally unlikely to be helpful to analyze each individual city exhaustively when there are well known and frankly obvious ways to improve local conditions generally. There’s so much low-hanging fruit which has been totally neglected for decades. That said, Landsat temperature band data could be incorporated into these redevelopment projects, as a way of identifying the highest priority areas for redevelopment based on their contributions to the UHI effect based on the surface temperature. NIR data could assist in identifying areas most in need of vegetation. I really don’t think the remote sensing is necessary for policymakers, but it might help to provide evidence to doubtful constituents so they’ll allow a bit more progress for a bit more time than they otherwise might.\n\n\n8 Reflection\nI was very surprised to see that the Burlington City Council officially has a plan that generally seems intelligent and informed, comporting with the UN new urban agenda and, in direction if not in magnitude, with my preferences. The actual condition of the city is the opposite of all that, and the trend has been toward sprawl and auto-centrality since about 1920. I was even more surprised to see that the public was generally supportive, according to polling the Council reported that they had done on general new urbanism topics. My impression of the public is not generally positive, especially in the US, and more especially in Burlington, because what I see more of is people using any means available to them to aggressively oppose even the faintest, most watered-down and incrementalist bit of progress at every turn. Maybe my impression of the general public attitude is part of a situation of pluralistic ignorance, and more community building within the citizenry could dispell that. Assuming the Councilors meant what they wrote in their policy at all, whatever tools can help them achieve their goals faster will be a huge help to the city.",
+    "text": "5.1 Summary\nGoogle Earth Engine (GEE) is a free (for now and for certain limited purposes) platform that serves and displays data from EO instruments programmatically, as well as providing some cloud-computing resources and built-in functions for common operations which are optimized to take advantage of running on Google’s servers. Scripting in GEE requires Javascript, which is less familiar to me than Python, but also less annoying to me than R. I’ll take it. According to today’s lecture, LLMs are not very familiar with GEE code, since there is so much more vanilla Javascript for them to have trained on than GEE-specific code.\nInterestingly, there is some interplay between the GUI and the scripting, allowing a user to draw in polygons and select points using the mouse.\nThe main task of the practical was combining multiple tiles into a mosaiced image using the median to combine multiple passes of the same tile, and the mean to combine the overlapping portions of images. Why not use something spatial to combine them, like at least an interpolation between tiles through the overlapping portion? We also reviewed band math, texture measures, and PCA using GEE. PCA in particular was much more involved than in R or Python, but not insurmountable to understand with some careful reading.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>February 24th, 2026</span>"
     ]
@@ -154,9 +154,209 @@
     "href": "week6.html",
     "title": "6  March 2, 2026",
     "section": "",
-    "text": "7 Summary\nRandom Classic image segmentation techniques (CART, Random Forest, NaiveBayes and SVM) are available for use in Google Earth Engine, on up to 1,000,000 points at a time. 1,000,000 is really not many. That’s a 1MP photo, like a 20-year-old phone camera. I used to work with at least 5MP industrial machine vision cameras, and sometimes trained models for those images on a laptop. It seems Google is not being particularly generous with the cloud computing resources, but it should at least be fast to train.\n\n\n8 Applications\n@choudhary_random_2022 trained a Random Forest model on Sentinel-2 data from GEE to predict rice yield from small farms in Guangdong Province, China. Lots of field work was involved in collecting the actual status of the rice fields, which was supported by the Guangdong Department of Agriculture. They used much more than 1000000 points and had to train the model outside of GEE, but achieved much more accurate results on test data than linear or single decision tree models.\n\n\n9 Reflection\nThis sort of approach seems pretty straightforward and foolproof.",
+    "text": "6.1 Summary\nClassic image segmentation techniques (Classification and Regression Tree, Random Forest, Naive Bayes and Support Vector Machines) are available for use in Google Earth Engine, on up to 1,000,000 points at a time. 1,000,000 is really not many. That’s a 1MP photo, like a mobile phone camera as old as some of the students in the program. I used to work with at least 5MP industrial machine vision cameras, and sometimes trained models for those images on a laptop. It seems Google is not being particularly generous with the cloud computing resources, but it should at least be fast to train.\nTraining machine learning models in general required reserving some (here 30%, but I’ve seen less than that in other contexts) of the data as a test set (and sometimes further reserving more data as a validation set, although we didn’t explicitly do this in the practical). A major difference could be observed in performance when the test-train split was done on the polygon level or on the individual pixel level. I expected pixel-wise to be better, but I did not expect such a stark difference. I noticed that there’s a totally obvious error in the code for the polygon-wise split too, which might be part of the issue. The split is actually 50/50 rather than 70/30, so the model is only getting to see half of the data.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>March 2, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week2.html#applications",
+    "href": "week2.html#applications",
+    "title": "2  January 20th, 2026",
+    "section": "2.2 Applications",
+    "text": "2.2 Applications\nSun, Qi, and Huang (2020) found that combining data across both ICESat missions enabled them to estimate reforestation in remote area of China, which is useful for carbon balance estimations and general environmental monitoring.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>January 20th, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week2.html#reflection",
+    "href": "week2.html#reflection",
+    "title": "2  January 20th, 2026",
+    "section": "2.3 Reflection",
+    "text": "2.3 Reflection\nI have used similar devices (in principle, not precision or expense) and can easily see how having one in space would be useful. The higher precision and resolution of ICESat-2 has enabled more use in forestry on shorter timescales in addition to the primary ice-tracking goal of the mission. Maybe another 250-fold increase in resolution is right around the corner.\n\n\n\n\nSun, Tong, Jianbo Qi, and Huaguo Huang. 2020. “Discovering Forest Height Changes Based on Spaceborne Lidar Data of ICESat-1 in 2005 and ICESat-2 in 2019: A Case Study in the Beijing-Tianjin-Hebei Region of China.” Forest Ecosystems 7 (1): 53. https://doi.org/10.1186/s40663-020-00265-w.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>January 20th, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#summary",
+    "href": "week6.html#summary",
+    "title": "6  March 2, 2026",
+    "section": "",
+    "text": "// // --------------------- train, test split --------------------------------\n\n// We want to reserve some of the data for testing, to avoid overfitting the model.\nvar split = 0.5;  // Roughly 70% training, 30% testing.\n//           ↑\n//     THIS HERE IS WRONG\n\n\nvar trainingPartition = withRandom.filter(ee.Filter.lt('random', split));\nvar testingPartition = withRandom.filter(ee.Filter.gte('random', split));",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>March 2, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#applications",
+    "href": "week6.html#applications",
+    "title": "6  March 2, 2026",
+    "section": "6.2 Applications",
+    "text": "6.2 Applications\nChoudhary et al. (2022) trained a Random Forest model on Sentinel-2 data from GEE to predict rice yield from small farms in Guangdong Province, China. Lots of field work was involved in collecting the actual status of the rice fields, which was supported by the Guangdong Department of Agriculture. They used much more than 1000000 points and had to train the model outside of GEE, but achieved much more accurate results on test data than linear or single decision tree models.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>March 2, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#reflection",
+    "href": "week6.html#reflection",
+    "title": "6  March 2, 2026",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection\nThis sort of approach seems pretty straightforward and foolproof.\n\n\n\n\nChoudhary, K., W. Shi, Y. Dong, and R. Paringer. 2022. “Random Forest for Rice Yield Mapping and Prediction Using Sentinel-2 Data with Google Earth Engine.” Advances in Space Research 70 (8): 2443–57. https://doi.org/10.1016/j.asr.2022.06.073.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>March 2, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#applications",
+    "href": "week3.html#applications",
+    "title": "3  January 27th, 2026",
+    "section": "3.2 Applications",
+    "text": "3.2 Applications",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>January 27th, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#reflection",
+    "href": "week3.html#reflection",
+    "title": "3  January 27th, 2026",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection\nI have a fair bit of experience with programmatic image processing, so none of this was new to me apart from the atmospheric correction. In the machine vision applications I have worked with before, there were always very consistently controlled and calibrated lighting conditions and calibration was only required annually or so as the LEDs slowly and evenly dimmed. The EO situation is obviously very different from that, but the idea of Multiple-Date Image Normalization appeals to me as a way to get a bit more consistent results, and I speculate that there should be a way to use a lot more of the image instead of just a few hand selected pseudo-invariant features. Some machine learning, or quantile regression across all the pixels maybe?",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>January 27th, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html#applications",
+    "href": "week4.html#applications",
+    "title": "4  February 10th, 2026",
+    "section": "4.2 Applications",
+    "text": "4.2 Applications\nNo remote sensing data can “solve” a policy challenge on its own, and my view is that it’s generally unlikely to be helpful to analyze each individual city exhaustively when there are well known and frankly obvious ways to improve local conditions generally. There’s so much low-hanging fruit which has been totally neglected for decades. That said, Landsat temperature band data could be incorporated into these redevelopment projects, as a way of identifying the highest priority areas for redevelopment based on their contributions to the UHI effect based on the surface temperature. NIR data could assist in identifying areas most in need of vegetation.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>February 10th, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html#reflection",
+    "href": "week4.html#reflection",
+    "title": "4  February 10th, 2026",
+    "section": "4.3 Reflection",
+    "text": "4.3 Reflection\nI was very surprised to see that the Burlington City Council officially has a plan that generally seems intelligent and informed, comporting with the UN new urban agenda and, in direction if not in magnitude, with my preferences. The actual condition of the city is the opposite of all that, and the trend has been toward sprawl and auto-centrality since about 1920. I was even more surprised to see that the public was generally supportive, according to polling the Council reported that they had done on general new urbanism topics. My impression of the public is not generally positive, especially in the US, and more especially in Burlington, because what I see more of is people using any means available to them to aggressively oppose even the faintest, most watered-down and incremental bit of progress at every turn. Maybe my impression of the general public attitude is part of a situation of pluralistic ignorance, and more community building within the citizenry could dispel that. Assuming the Councilors meant what they wrote in their policy at all, whatever tools can help them achieve their goals faster will be a huge help to the city.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>February 10th, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week5.html#applications",
+    "href": "week5.html#applications",
+    "title": "5  February 24th, 2026",
+    "section": "5.2 Applications",
+    "text": "5.2 Applications",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>February 24th, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week5.html#reflection",
+    "href": "week5.html#reflection",
+    "title": "5  February 24th, 2026",
+    "section": "5.3 Reflection",
+    "text": "5.3 Reflection",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>February 24th, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html",
+    "href": "week7.html",
+    "title": "7  March 9, 2026",
+    "section": "",
+    "text": "7.1 Summary\nThis week covered many additional methods for image classification, in particular sub-pixel methods and object-based classification.\n“Sub-pixel methods” in this context has a bit of a different meaning from what I’ve encountered before. It’s a similar idea but the goal is to un-mix the spectral signatures that could have combined to produce each pixels’ overall spectrum, whereas I knew it as a way of measuring the size or position of an object within a photograph with greater precision than the size of a pixel. Both rely on the assumption that the overall value of each channel is a linear combination of two or more different true values scaled by the proportion of the area of the pixel covered by the types of things which produce those true values. In the practical, we used “unmix” in GEE to generate predicted portions of each pixel belonging to each of 4 “endmembers” (then merged 2 of them into 1 for a final count of 3). When hardening the predictions to generate a confusion matrix, we were instructed to use a threshold of 50% for each of the 4 endmembers. I’m not sure I like that. It kind of seems like the classification should be selected based on whichever endmember’s predicted contribution to the overall pixel is highest even if none is more than 50%. Some pixels may not be classified at all with a 50% threshold and more than 2 endmembers, right?\nObject-based classification requires the clustering of close and similar pixels into groups (objects) and training a classifier on the characteristics of the objects within the image instead of on the pixels. There are many ways of clustering pixels into objects, including K-means and Simple Non-Iterative Clustering (SNIC) which we covered in the practical, but they all do generally the same process of finding groupings of similar pixels and calculating features of the combined objects. A potential advantage is that the shape characteristics of the objects can be included as features for the classification. This seems very useful for built environment classifications because of all the distinct and high-contrast shapes involved.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>March 9, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#applications",
+    "href": "week7.html#applications",
+    "title": "7  March 9, 2026",
+    "section": "7.2 Applications",
+    "text": "7.2 Applications",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>March 9, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#reflection",
+    "href": "week7.html#reflection",
+    "title": "7  March 9, 2026",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>March 9, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html",
+    "href": "week8.html",
+    "title": "8  March 16, 2026",
+    "section": "",
+    "text": "8.1 Summary\nThis week was all about temperature data, which is captured by both Landsat and Moderate Resolution Imaging Spectroradiometer (MODIS). Landsat has much better spatial resolution (30 m vs 1 km), but much worse temporal resolution (16 days vs generally 0.5 days). The thermal bands need to be scaled according to the documentation and then converted from K to °C by subtracting 273.1. Or, of course, you might want to work with the temperature in K if you’re doing some kind of analysis of emissivity or heat exchange.\nAs a demonstration of some techniques, we found the average temperature per postcode area in London, split the postcode areas by quantiles, and plotted the results on a map both in R and in GEE. Both versions are weird in how they handle the edges of the quantiles. The R version seems to assume that the ranges are inclusive on both ends, and compensate for that by separating the ranges by an arbitrary 0.01%, but the GEE version is exclusive on both ends of the ranges except for the final one. It seems that some postcode area(s) could potentially slip through the cracks in both versions. Oops.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>March 16, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#applications",
+    "href": "week8.html#applications",
+    "title": "8  March 16, 2026",
+    "section": "8.2 Applications",
+    "text": "8.2 Applications",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>March 16, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#reflection",
+    "href": "week8.html#reflection",
+    "title": "8  March 16, 2026",
+    "section": "8.3 Reflection",
+    "text": "8.3 Reflection",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>March 16, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week9.html",
+    "href": "week9.html",
+    "title": "9  March 23, 2026",
+    "section": "",
+    "text": "9.1 Summary\nThis final lecture concerned Synthetic Aperture Radar (SAR). Unlike the other sensors we have been working with, SAR is an active instrument. It outputs a radio wave and “listens” for the response when the reflected radio signal bounces back up to the sensor (or doesn’t, as the case may be) from the surface of the Earth. The aperture is “synthetic” because the rapid motion of the satellite is used to compensate for the short length of the antenna. Different combinations of frequency and polarization are best suited for different tasks, so consulting literature and a bit of trial-and-error might be helpful in beginning any SAR-based analysis. Because the waves are not blocked by clouds and it doesn’t rely on the sun for illumination, SAR data is more consistently usable. Detecting change, through many, many potential metrics seems to the most common theme behind use cases for SAR.\nInterferometric synthetic aperture radar (InSAR) is where it gets really interesting. By comparing the phase of the return signal in successive passes, the difference in the elevation of surface below can be revealed (potentially plus or minus any integer number of half wavelengths). SAR data is reported as an imaginary number (generally equivalent in engineering applications to sinusoid with a certain magnitude and phase, which is both familiar and pretty cool). GEE only provides the magnitude of the return, no phase, so you need other tools to work with InSAR. The lecture says you have to use SNAP, but there are definitely Python packages for it.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>March 23, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week9.html#applications",
+    "href": "week9.html#applications",
+    "title": "9  March 23, 2026",
+    "section": "9.2 Applications",
+    "text": "9.2 Applications",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>March 23, 2026</span>"
+    ]
+  },
+  {
+    "objectID": "week9.html#reflection",
+    "href": "week9.html#reflection",
+    "title": "9  March 23, 2026",
+    "section": "9.3 Reflection",
+    "text": "9.3 Reflection",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>March 23, 2026</span>"
     ]
   }
 ]

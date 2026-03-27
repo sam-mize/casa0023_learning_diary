@@ -1,0 +1,17 @@
+---
+title: "March 23, 2026"
+---
+
+## Summary
+
+This final lecture concerned Synthetic Aperture Radar (SAR). Unlike the other sensors we have been working with, SAR is an active instrument. It outputs a radio wave and "listens" for the response when the reflected radio signal bounces back up to the sensor (or doesn't, as the case may be) from the surface of the Earth. The aperture is "synthetic" because the rapid motion of the satellite is used to compensate for the short length of the antenna. Different combinations of frequency and polarization are best suited for different tasks, so consulting literature and a bit of trial-and-error might be helpful in beginning any SAR-based analysis. Because the waves are not blocked by clouds and it doesn't rely on the sun for illumination, SAR data is more consistently usable. Detecting change, through many, many potential metrics seems to the most common theme behind use cases for SAR.
+
+Interferometric synthetic aperture radar (InSAR) is where it gets really interesting. By comparing the phase of the return signal in successive passes, the difference in the elevation of surface below can be revealed (potentially plus or minus any integer number of half wavelengths). SAR data is reported as an imaginary number (generally equivalent in engineering applications to sinusoid with a certain magnitude and phase, which is both familiar and pretty cool). GEE only provides the magnitude of the return, no phase, so you need other tools to work with InSAR. The lecture says you have to use SNAP, but there are definitely Python packages for it.
+
+## Applications
+
+
+
+## Reflection
+
+

@@ -89,6 +89,7 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/fitvids-2.1.1/fitvids.min.js"></script>
 
 
 </head>
@@ -171,6 +172,24 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">March 9, 2026</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">March 16, 2026</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">March 23, 2026</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -185,9 +204,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">4</span> Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">2.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">2.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -213,19 +232,25 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Summary</h1>
+<section id="summary" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.1</span> Summary</h2>
 <p>NASA’s Ice, Cloud, and Land Elevation Satellite (ICESat) launched in 2002 and collected data using its Geoscience Laser Altimeter System (GLAS) instrumentation between 2003 and 2010, when it ceased functioning. Its successor, ICESat-2, has replaced it since 2018. Fundamentally, both measure the distance from the satellite instrumentation to the Earth’s surface by shooting pulses of laser light at the Earth and recording the time required for the reflection of the laser to reach a telescope mounted parallel to the laser. On-board processing is used to detect the pulses approximately and select the regions of data to transmit to the ground for more refined processing. ICESat could only handle 40 pulses per second, but ICESat-2 can do 10000. Consequently, ICESat-2 collects 250 times more points along the same path length. The original could measure with about 10 cm resolution, and the current resolution is about 5 mm.</p>
-<pre><code>xaringanExtra::embed_xaringan(url = "https://sam-mize.github.io/casa0023/slideshow.html#1",
-                              ratio = "16:9")</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
+<iframe src="https://sam-mize.github.io/casa0023/slideshow.html#1" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+</div>
+</div>
 </section>
-<section id="applications" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Applications</h1>
-<p><span class="citation" data-cites="sunDiscoveringForestHeight2020">Sun, Qi, and Huang (<a href="references.html#ref-sunDiscoveringForestHeight2020" role="doc-biblioref">2020</a>)</span> found that combining data across both ICESat missions enabled them to estimate reforestation in remote area of China, which is important knowledge for carbon balance and general environmental science.</p>
+<section id="applications" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">2.2</span> Applications</h2>
+<p><span class="citation" data-cites="sunDiscoveringForestHeight2020">Sun, Qi, and Huang (<a href="references.html#ref-sunDiscoveringForestHeight2020" role="doc-biblioref">2020</a>)</span> found that combining data across both ICESat missions enabled them to estimate reforestation in remote area of China, which is useful for carbon balance estimations and general environmental monitoring.</p>
 </section>
-<section id="reflection" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Reflection</h1>
-<p>I have use similar devices (in priciple, not precision or expense) and can easily see how having one in space would be useful. The higher precision and resolution of ICESat-2 has enabled more use in forestry on shorter timescales in addition to the primary ice-tracking goal of the mission. Maybe another 250-fold increase in resolution is right around the corner.</p>
+<section id="reflection" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">2.3</span> Reflection</h2>
+<p>I have used similar devices (in principle, not precision or expense) and can easily see how having one in space would be useful. The higher precision and resolution of ICESat-2 has enabled more use in forestry on shorter timescales in addition to the primary ice-tracking goal of the mission. Maybe another 250-fold increase in resolution is right around the corner.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

@@ -2,57 +2,14 @@
 title: "February 10th, 2026"
 ---
 
-# Summary
+## Summary
 
-My hometown of Burlington, North Carolina, USA has a [Comprehensive Plan](https://www.burlingtonnc.gov/DocumentCenter/View/7212/Destination-Burlington-Comprehensive-Plan_Adopted-10-15?bidId=) which includes a set of roadway corridors which are aesthetically in need of
-redevelopment, as well as a goal of improving the urban environment
-and reducing the UHI effect by planting public street trees and
-encouraging (or requiring) property developers to include trees. They
-say that future growth should occur within the boundaries of the city
-for the foreseeable future to avoid developing any more of the
-peripheral agricultural land. They’ve had this plan in its current
-iteration for over a decade, and you would never know from seeing the
-town. Greenfield developments on the edge of town have carried on. I
-think they have made some slight progress on the tree planting, and
-maybe a very small amount of progress on the redevelopment along the
-target corridors, but it’s still really bad. I think the city
-council has mostly good ideas in their Comprehensive Plan, but the
-implementation seems hopelessly slow. Maybe incorporating EO data
-could help to better target efforts. Or maybe it could provide better
-evidence of whatever progress has been made to keep people like me
-from giving up on it and moving away.
+My hometown of Burlington, North Carolina, USA has a [Comprehensive Plan](https://www.burlingtonnc.gov/DocumentCenter/View/7212/Destination-Burlington-Comprehensive-Plan_Adopted-10-15?bidId=) which includes a set of roadway corridors which are aesthetically in need of redevelopment, as well as a goal of improving the urban environment and reducing the UHI effect by planting public street trees and encouraging (or requiring) property developers to include trees. They say that future growth should occur within the boundaries of the city for the foreseeable future to avoid developing any more of the peripheral agricultural land. They’ve had this plan in its current iteration for over a decade, and you would never know from seeing the town. Greenfield developments on the edge of town have carried on. I think they have made some slight progress on the tree planting, and maybe a very small amount of progress on the redevelopment along the target corridors, but it’s still really bad. I think the city council has mostly good ideas in their Comprehensive Plan, but the implementation seems hopelessly slow. Maybe incorporating EO data could help to better target efforts. Or maybe it could provide better evidence of whatever progress has been made to keep people like me from giving up on it and moving away.
 
-# Applications
+## Applications
 
-No remote sensing data can “solve” a policy challenge on its own,
-and my view is that it’s generally unlikely to be helpful to
-analyze each individual city exhaustively when there are well known
-and frankly obvious ways to improve local conditions generally.
-There’s so much low-hanging fruit which has been totally neglected
-for decades. That said, Landsat temperature band data could be
-incorporated into these redevelopment projects, as a way of
-identifying the highest priority areas for redevelopment based on
-their contributions to the UHI effect based on the surface
-temperature. NIR data could assist in identifying areas most in need
-of vegetation. I really don’t think the remote sensing is necessary
-for policymakers, but it might help to provide evidence to doubtful
-constituents so they’ll allow a bit more progress for a bit more
-time than they otherwise might.
+No remote sensing data can “solve” a policy challenge on its own, and my view is that it’s generally unlikely to be helpful to analyze each individual city exhaustively when there are well known and frankly obvious ways to improve local conditions generally. There’s so much low-hanging fruit which has been totally neglected for decades. That said, Landsat temperature band data could be incorporated into these redevelopment projects, as a way of identifying the highest priority areas for redevelopment based on their contributions to the UHI effect based on the surface temperature. NIR data could assist in identifying areas most in need of vegetation. 
 
-# Reflection
+## Reflection
 
-I was very surprised to see that the Burlington City Council
-officially has a plan that generally seems intelligent and informed,
-comporting with the UN new urban agenda and, in direction if not in
-magnitude, with my preferences. The actual condition of the city is
-the opposite of all that, and the trend has been toward sprawl and
-auto-centrality since about 1920. I was even more surprised to see
-that the public was generally supportive, according to polling the
-Council reported that they had done on general new urbanism topics.
-My impression of the public is not generally positive, especially in
-the US, and more especially in Burlington, because what I see more of
-is people using any means available to them to aggressively oppose
-even the faintest, most watered-down and incrementalist bit of
-progress at every turn. Maybe my impression of the general public attitude is part of a situation of pluralistic ignorance, and more community building within the citizenry could dispell that. Assuming the Councilors meant what they wrote
-in their policy at all, whatever tools can help them achieve their
-goals faster will be a huge help to the city.
+I was very surprised to see that the Burlington City Council officially has a plan that generally seems intelligent and informed, comporting with the UN new urban agenda and, in direction if not in magnitude, with my preferences. The actual condition of the city is the opposite of all that, and the trend has been toward sprawl and auto-centrality since about 1920. I was even more surprised to see that the public was generally supportive, according to polling the Council reported that they had done on general new urbanism topics. My impression of the public is not generally positive, especially in the US, and more especially in Burlington, because what I see more of is people using any means available to them to aggressively oppose even the faintest, most watered-down and incremental bit of progress at every turn. Maybe my impression of the general public attitude is part of a situation of pluralistic ignorance, and more community building within the citizenry could dispel that. Assuming the Councilors meant what they wrote in their policy at all, whatever tools can help them achieve their goals faster will be a huge help to the city.
